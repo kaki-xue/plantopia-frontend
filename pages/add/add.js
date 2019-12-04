@@ -130,11 +130,10 @@ Page({
     const user_id = getApp().globalData.userId
     plant.name = page.data.plant.name
     plant.water_frequency = page.data.plant.water_freq_avg
-    plant.plant_lib_id = page.data.plant.id
-    console.log('water frequency',page.data.plant.water_freq_avg)
+    plant.plant_library_id = page.data.plant.id
+    console.log('plant lib id', page.data.plant.id)
 
-    console.log('what went there', plant)
-
+    plant.image = page.data.plant.image
 
     wx.request({
       url: `https://plantopia.wogengapp.cn/api/v1/users/${user_id}/plants`,

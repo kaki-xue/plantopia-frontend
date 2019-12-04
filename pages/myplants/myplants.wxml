@@ -1,2 +1,33 @@
-<!--pages/myplants/myplants.wxml-->
-<text>pages/myplants/myplants.wxml</text>
+
+<view class="header">
+  <text class="header-bar">My plant babies </text>
+</view>
+<view class="container">
+  <view class="cards">
+   <image src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"></image>
+   <view class="text-align">
+     <view>Name</view>
+     <view>Icon</view>
+     <view>Add</view>
+   </view>
+  </view>
+
+  <view class="cards">
+   <image src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"></image>
+   <view class="text-align">
+     <view>Name</view>
+     <view>Icon</view>
+     <view>Add</view>
+   </view>
+  </view>
+
+  <view class="cards">
+   <image src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"></image>
+   <view class="text-align">
+     <view>Name</view>
+     <view>Icon</view>
+     <view>Add</view>
+   </view>
+  </view>
+  
+</view>

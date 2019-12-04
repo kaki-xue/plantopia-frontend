@@ -1,1 +1,24 @@
 /* pages/myplants/myplants.wxss */
+.header {
+  height:60px;
+  border-bottom: 2px solid #cccccc;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  
+}
+.header-bar {
+  color:black;
+}
+.container {
+  height: 100%;
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+
+}
+.cards {
+  width:30%;
+
+}

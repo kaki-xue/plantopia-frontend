@@ -1,8 +1,9 @@
 <!-- form to add plant_library_id to my plant -->
  <view class="weui-cells__title">My Plant</view>
-  <image src="{{image}}"></image>
-    <view>{{name}}</view>
-    <view>Water Frequency Average: {{water_freq_avg}} days</view>
+  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})">
+    <view class="centre-text">{{plant.name}}</view>
+  </view>
+    <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
       <form bindsubmit="formSubmit" class="weui-form">
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
@@ -22,7 +23,7 @@
                 </view>
             </view>
         </view> -->
-            <view class="weui-cell ">
+            <!-- <view class="weui-cell ">
                 <view class="weui-cell__hd">
                     <view class="weui-label">Date:</view>
                 </view>
@@ -31,7 +32,7 @@
                         <view class="weui-input">{{date}}</view>
                     </picker>
                 </view>
-            </view>
+            </view> -->
             <!-- <view class="weui-cell ">
                 <view class="weui-cell__hd">
                     <view class="weui-label">Time:</view>

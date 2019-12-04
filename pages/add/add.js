@@ -47,9 +47,9 @@ Page({
       success(res) {
         console.log("request on new", res)
         const plant = res.data;
-        page.setData(
-          plant
-        );
+        page.setData({
+          plant: plant
+        });
         wx.hideToast();
       }
     });
@@ -104,25 +104,47 @@ Page({
 
   },
 
-  bindDateChange: function (e) {
-    const val = e.detail.value
-    this.setData({
-      year: this.data.years[val[0]],
-      month: this.data.months[val[1]],
-      day: this.data.days[val[2]]
-    })
-    console.log('this data for data',)
-  },
+  // bindDateChange: function (e) {
+  //   const val = e.detail.value
+  //   this.setData({
+  //     year: this.data.years[val[0]],
+  //     month: this.data.months[val[1]],
+  //     day: this.data.days[val[2]]
+  //   })
+  //   console.log('this data for data',)
+  // },
 
 
-  bindTime: function (e) {
-    this.setData({
-      timeData: e.detail.value
-    })
-    console.log('this data for time', this.data)
-  },
+  // bindTime: function (e) {
+  //   this.setData({
+  //     timeData: e.detail.value
+  //   })
+  //   console.log('this data for time', this.data)
+  // },
 
   formSubmit: function (event) {
-    console.log('submitted', event)
+    let page = this;
+    let plant = {};
+    plant.nickname = event.detail.value.nickname
+    plant.description = event.detail.value.description
+    const user_id = getApp().globalData.userInfo.userId
+    plant.name = page.data.plant.name
+    plant.water_frequency = page.data.plant.water_freq_avg
+   console.log(user_id)
+    console.log('plant details', plant)
+
+
+    wx.request({
+      url: `https://plantopia.wogengapp.cn/api/v1/plants`,
+      method: 'post',
+      data: plant,
+      success: function (res) {
+        console.log("success", res);
+        // const id = res.data.id
+        // wx.reLaunch({
+        //   url: `/pages/myplant/myplant?id={}`,
+        // })
+      }
+    })
   }
 })

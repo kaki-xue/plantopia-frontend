@@ -8,7 +8,7 @@ App({
         console.log(res)
         // insert next code here
         wx.request({
-          url: host + 'login',
+          url: host + '/login',
           method: 'post',
           data: {
             code: res.code
@@ -17,6 +17,7 @@ App({
           success: (res) => {
             console.log(res)
             this.globalData.userId = res.data.userId
+            console.log(this.globalData)
           }
         })
 

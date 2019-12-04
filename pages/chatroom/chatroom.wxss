@@ -1,1 +1,67 @@
 /* pages/chatroom/chatroom.wxss */
+
+.avatar-large {
+  width: 56px;
+  height:56px;
+  border-radius: 50%;
+}
+
+
+.plant-avatar {
+display:flex;
+justify-content:center;
+width:100vw;
+padding:10px;
+border-bottom: 1px rgb(197, 197, 197) solid;
+border-top: none;
+}
+
+.chatroom {
+  height:530px;  
+  }
+  .btn-user {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  /* font-weight: light; */
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin:15px;
+  width:60%;
+  text-align: right;
+  float:right;
+
+
+}
+.btn-plant {
+  color: white;
+  padding: 8px 24px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  margin:15px;
+  border-radius: 50px;
+  width:60%;
+  display:inline-block;
+}
+
+.msg-button {
+  display:flex;
+  justify-content: space-evenly;
+  margin:10px;
+}
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 15px;
+  background:white;
+  border:solid;
+  border-color:#1CE2A7;
+  transition: background 0.3s ease;
+  width:130px;
+  text-align: center;
+}
+.fas {
+  color:#4A4A4A;
+  font-size:25px;
+}

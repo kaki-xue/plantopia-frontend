@@ -6,6 +6,7 @@
     "pages/myplants/myplants",
     "pages/myplant/myplant",
     "pages/chatroom/chatroom",
+    "pages/scan_result/scan_result",
     "pages/logs/logs"
   ],
   "window": {

@@ -84,8 +84,11 @@
 				},
 				{
 					"id": -1,
+
 					"name": "pages/myplants/myplants",
 					"pathName": "pages/myplants/myplants",
+					"name": "pages/myplant/myplant",
+					"pathName": "pages/myplant/myplant",
 					"scene": null
 				}
 			]

@@ -93,6 +93,20 @@
 					"id": -1,
 					"name": "pages/myplants/myplants",
 					"pathName": "pages/myplants/myplants",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/chatroom/chatroom",
+					"pathName": "pages/chatroom/chatroom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/scan_result/scan_result",
+					"pathName": "pages/scan_result/scan_result",
 					"scene": null
 				}
 			]

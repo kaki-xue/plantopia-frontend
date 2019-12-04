@@ -1,2 +1,24 @@
 <!--pages/chatroom/chatroom.wxml-->
-<text>pages/chatroom/chatroom.wxml</text>
+
+  <view class="plant-avatar">
+  <image class="avatar-large" src="https://images.unsplash.com/photo-1554631221-f9603e6808be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" ></image>
+  </view>
+
+  <view class="chatroom">
+   <view>
+    <view>2019-08-11</view>
+    <view class="btn btn-plant" href="#">Hey ya ;)</view>
+   </view>
+    <view class="btn btn-user" href="#">Hey buddy, I just watered ya</view> 
+    <view class="btn btn-plant" href="#">Thanks for taking care of me!</view>
+    <view class="btn btn-plant" href="#">Oh god I am thirsty..</view>
+    <view class="btn btn-user" href="#">Hold on there, I'll water you later</view> 
+    <view class="btn btn-plant" href="#">I am dying...</view>
+
+  </view>
+
+  <view class="msg-button">
+    <view class="btn btn-flat"><text class="fas fa-tint"></text></view>
+    <view class="btn btn-flat"><text class="fas fa-clock"></text></view>
+  </view>
+

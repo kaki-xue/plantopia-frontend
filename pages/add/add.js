@@ -127,23 +127,24 @@ Page({
     let plant = {};
     plant.nickname = event.detail.value.nickname
     plant.description = event.detail.value.description
-    const user_id = getApp().globalData.userInfo.userId
+    const user_id = getApp().globalData.userId
     plant.name = page.data.plant.name
     plant.water_frequency = page.data.plant.water_freq_avg
-   console.log(user_id)
-    console.log('plant details', plant)
+    plant.plant_library_id = page.data.plant.id
+    console.log('plant lib id', page.data.plant.id)
 
+    plant.image = page.data.plant.image
 
     wx.request({
-      url: `https://plantopia.wogengapp.cn/api/v1/plants`,
+      url: `https://plantopia.wogengapp.cn/api/v1/users/${user_id}/plants`,
       method: 'post',
       data: plant,
       success: function (res) {
         console.log("success", res);
-        // const id = res.data.id
-        // wx.reLaunch({
-        //   url: `/pages/myplant/myplant?id={}`,
-        // })
+        const id = res.data.id
+        wx.reLaunch({
+          url: `/pages/myplants/myplants?id=${user_id}`,
+        })
       }
     })
   }

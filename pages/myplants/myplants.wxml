@@ -1,2 +1,72 @@
-<!--pages/myplants/myplants.wxml-->
-<text>pages/myplants/myplants.wxml</text>
+
+<view class="header">
+  <text class="header-bar">My plant babies </text><text></text><text style="color:#9dd8c8" class="fas fa-baby-carriage"></text>
+</view>
+
+<view class="container">
+
+  <view class="cards">
+    <image src="https://images.unsplash.com/photo-1548460464-2a68877c7a5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"></image>
+    <view class="card-trip-infos">
+      <view>
+        <view>rose</view>
+      </view>
+      <view>
+        <view bindtap="gotTodetail" class="fas fa-info-circle"></view>
+      </view>
+      <view>
+        <view class="fas fa-heart-broken"></view>
+      </view>
+    </view>
+   </view>
+
+   <view class="cards">
+    <image src="https://images.unsplash.com/photo-1459664018906-085c36f472af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
+    <view class="card-trip-infos">
+      <view>
+        <view>cactus</view>
+      </view>
+      <view>
+        <view bindtap="gotTodetail" class="fas fa-info-circle"></view>
+      </view>
+      <view>
+        <view class="fas fa-laugh-wink"></view>
+      </view>
+    </view>
+  </view>
+
+   <view class="cards">
+    <image src="https://images.unsplash.com/photo-1527195694714-9b939fac3432?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></image>
+    <view class="card-trip-infos">
+      <view>
+        <view>Lily</view>
+      </view>
+      <view>
+        <view bindtap="gotTodetail" class="fas fa-info-circle"></view>
+      </view>
+      <view>
+        <view class="fas fa-heart-broken"></view>
+      </view>
+    </view>
+  </view>
+
+   <view class="cards">
+    <image src="https://images.unsplash.com/photo-1563377820075-305ef6aae27a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"></image>
+    <view class="card-trip-infos">
+      <view>
+        <view>citrus</view>
+      </view>
+      <view>
+        <view bindtap="gotTodetail" class="fas fa-info-circle"></view>
+      </view>
+      <view>
+        <view class="fas fa-laugh-wink"></view>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
+
+
+

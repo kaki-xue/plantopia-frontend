@@ -1,1 +1,47 @@
 /* pages/myplants/myplants.wxss */
+.header {
+  height:60px;
+  border-bottom: 2px solid #cccccc;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  background-color: white;
+  
+}
+.header-bar {
+  color:black;
+}
+.container {
+  height:100vh;
+  width:100%;
+  justify-content: space-evenly;
+  display:grid;
+  grid-template-columns: 40vw 40vw;
+  grid-gap: 8px;
+  background-color: white;
+  padding-top:15px;
+}
+.cards {
+  background-size: cover;
+  border:1px solid #cccccc;
+  border-radius:8px;
+  font-weight: bold;
+}
+
+.cards image {
+  max-width: 40vw;
+  max-height: 40vw;
+}
+
+.card-trip-infos{
+ display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: white;
+  height:100%;
+}
+
+.card-trip-infos view {
+
+}

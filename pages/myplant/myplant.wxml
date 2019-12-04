@@ -1,1 +1,40 @@
 <!--pages/myplant/myplant.wxml-->
+<view class="plant-page">
+ <!-- profile pic -->
+  <view class="profile-pic">
+    <view class="card-category" style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(https://images.unsplash.com/photo-1540039906769-84cf3d448bc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 )">
+      Sunny
+    </view>
+  </view>
+<!-- l  -->
+  <view class="card-product">
+
+
+    <view class="card">
+      <text  class="fas fa-leaf"></text>
+      <view class="card-product-infos">
+        <view class="h2">Genus</view>
+        <view class="p">Sunflower </view>
+      </view>
+    </view>
+
+    <view class="card">
+      <text class="fas fa-tint"></text>
+      <view class="card-product-infos">
+        <view class="h2">Water me</view>
+        <view class="p">Every 7 days</view>
+      </view>
+    </view>
+
+    <view class="card">
+      <text class="fas fa-address-card"></text>    
+      <view class="card-product-infos">
+        <view class="h2">Description</view>
+        <view class="p"> I moved in on a sunny day, I guess that's why this nickname</view>
+      </view>
+    </view>
+ 
+
+    
+  </view>
+</view>

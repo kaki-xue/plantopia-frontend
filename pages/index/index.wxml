@@ -1,0 +1,44 @@
+<!--index.wxml-->
+
+<!-- banner -->
+<view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1574741690638-84dc0244851a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=983&q=80)">
+  Plantopia.
+</view>
+<!-- https://images.unsplash.com/photo-1563769874043-9eac75ae0049?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80 -->
+<!-- https://images.unsplash.com/photo-1574741690638-84dc0244851a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=983&q=80 -->
+<!-- searchbar -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="Search a plant..." value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">Find a plant</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">Cancel</view>
+        </view>
+    </view>
+</view>
+
+
+<!-- plant-cards -->
+<view class="plant-cards">
+  <view wx:for="{{plant_libraries}}" wx:for-index="index" wx:key wx:for-item="plant" >
+  <view class="plant" style="background-image: url({{plant.image}})" bindtap="goToShow" data-id="{{plant.id}}">
+  <view class="plant-text"> {{plant.name}}</view>
+  </view>
+  </view>
+</view>
+
+
+
+
+

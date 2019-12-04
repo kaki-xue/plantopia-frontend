@@ -1,0 +1,21 @@
+<!--pages/show/show.wxml-->
+<view class="plant-card">
+  <view class="card-trip">
+    <image
+  src="{{image}}"></image>
+    <view class="card-trip-infos">
+      <view>
+        <view class="h2">{{name}}</view>
+        <view class="p">Water me every {{water_freq_avg}} days</view>
+      </view>
+      <view class="button-sp-area">
+            <!-- <button class="weui-btn mini-btn" type="primary" size="mini">add</button> -->
+            <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToFav" data-id="{{id}}">like</button>
+            <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button>
+ 
+           
+     
+        </view>
+    </view> 
+  </view>
+</view>

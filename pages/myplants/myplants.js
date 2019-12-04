@@ -7,7 +7,11 @@ Page({
   data: {
 
   },
-
+  gotTodetail: function (event) {
+    wx.navigateTo({
+      url: `/pages/myplant/myplant`
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

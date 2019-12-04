@@ -52,7 +52,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -84,11 +84,15 @@
 				},
 				{
 					"id": -1,
-
-					"name": "pages/myplants/myplants",
-					"pathName": "pages/myplants/myplants",
 					"name": "pages/myplant/myplant",
 					"pathName": "pages/myplant/myplant",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myplants/myplants",
+					"pathName": "pages/myplants/myplants",
 					"scene": null
 				}
 			]

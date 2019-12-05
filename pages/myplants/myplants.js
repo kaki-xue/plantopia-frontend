@@ -22,8 +22,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("what's this",options)
-
+    
   },
 
   /**

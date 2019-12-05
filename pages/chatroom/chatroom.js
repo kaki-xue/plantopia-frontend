@@ -46,22 +46,22 @@ Page({
    let user_id = app.globalData.userId
    let page=this
    let plant_chat={}
-  //  plant_chat.user_id=user_id
-  // //  plant_chat.plant_id=options.dataset.id
-  // plant_chat.plant_id=3
-
-  //   wx.request({
-  //     url: 'http:localhost:3000/api/v1/plant_chats',
-  //     method: 'post',
-  //     data: plant_chat,
-  //     success: function (res) {
-  //       console.log("success", res);
-  //       const id = res.data.id
-  //       wx.reLaunch({
-  //         url: `/pages/chatroom/chatroom`,
-  //       })
-  //     }
-  //   })
+   plant_chat.user_id=user_id
+  //  plant_chat.plant_id=options.dataset.id
+   plant_chat.plant_id = 3
+    wx.request({
+      url: 'http:localhost:3000/api/v1/plant_chats',
+      method: 'post',
+      data: plant_chat,
+      success: function (res) {
+        console.log("success", res);
+        const id = res.data.id
+        console.log("chatroom-id:", id)
+        wx.reLaunch({
+          url: `/pages/chatroom/chatroom`,
+        })
+      }
+    })
   },
 
 
@@ -78,7 +78,26 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const app = getApp()
+    let user_id = app.globalData.userId
+    let page = this
+    let plant_chat = {}
+    plant_chat.user_id = user_id
+    //  plant_chat.plant_id=options.dataset.id
+    plant_chat.plant_id = 3
+    wx.request({
+      url: 'http:localhost:3000/api/v1/plant_chats',
+      method: 'post',
+      data: plant_chat,
+      success: function (res) {
+        console.log("success", res);
+        const id = res.data.id
+        console.log("chatroom-id:", id)
+        wx.reLaunch({
+          url: `/pages/chatroom/chatroom`,
+        })
+      }
+    })
   },
 
   /**

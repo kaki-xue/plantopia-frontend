@@ -28,7 +28,7 @@ Page({
     const user_id = getApp().globalData.userId
 
     wx.request({
-      url: getApp().globalData.local_host + '/api/v1/users/1',
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
       // `/api/v1/users/${user_id}`,
       method: 'GET',
       success(res) {
@@ -60,7 +60,7 @@ Page({
     const user_id = getApp().globalData.userId
 
     wx.request({
-      url: getApp().globalData.local_host + '/api/v1/users/1',
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
       // `/api/v1/users/${user_id}`,
       method: 'GET',
       success(res) {

@@ -1,7 +1,8 @@
 //app.js
 App({
   onLaunch: function () {
-    const host = 'https://plantopia.wogengapp.cn'
+    // const host = 'https://plantopia.wogengapp.cn'
+    const host = 'http://localhost:3000'
     console.log('beginning login')
     wx.login({
       success: (res) => {
@@ -17,7 +18,7 @@ App({
           success: (res) => {
             console.log(res)
             this.globalData.userId = res.data.userId
-            console.log(this.globalData)
+
           }
         })
 

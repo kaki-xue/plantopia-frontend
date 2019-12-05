@@ -28,7 +28,8 @@ Page({
     let page = this;
     wx.request({
 
-      url: "https://plantopia.wogengapp.cn/api/v1/plant_libraries",
+      // url: "https://plantopia.wogengapp.cn/api/v1/plant_libraries",
+      url: "http://localhost:3000/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
         console.log("hello",res)

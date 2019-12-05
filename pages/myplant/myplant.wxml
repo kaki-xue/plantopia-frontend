@@ -34,7 +34,7 @@
       </view>
     </view>
  
-
+    <view bindtap="removePlant" class="fas fa-trash-alt"></view>
     
   </view>
 </view>

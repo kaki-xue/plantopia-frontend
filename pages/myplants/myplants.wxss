@@ -27,6 +27,7 @@
   border:1px solid #cccccc;
   border-radius:8px;
   font-weight: bold;
+
 }
 
 .cards image {

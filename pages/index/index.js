@@ -17,6 +17,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   goToShow: function (event) {
     let id = event.currentTarget.dataset.id;
     wx.navigateTo({

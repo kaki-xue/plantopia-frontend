@@ -7,6 +7,12 @@ Page({
   data: {
 
   },
+
+  goToChatroom: function (e) {
+    wx.navigateTo({
+      url: '/pages/chatroom/chatroom',
+    })
+  },
   gotTodetail: function (event) {
     wx.navigateTo({
       url: `/pages/myplant/myplant`

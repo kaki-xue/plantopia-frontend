@@ -40,6 +40,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log("global data", getApp().globalData)
     let page = this;
     wx.request({
       url: `https://plantopia.wogengapp.cn/api/v1/plant_libraries/${options.id}`,
@@ -47,6 +48,7 @@ Page({
       success(res) {
         console.log("request on new", res)
         const plant = res.data;
+        
         page.setData({
           plant: plant
         });

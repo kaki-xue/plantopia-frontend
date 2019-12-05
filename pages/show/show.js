@@ -20,8 +20,7 @@ Page({
     let page = this;
    console.log("options from show page",options)
     wx.request({
-      // url: `https://plantopia.wogengapp.cn/api/v1/plant_libraries/${options.id}`,
-      url: `http://localhost:3000/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("pll",res)

@@ -28,8 +28,7 @@ Page({
     let page = this;
     wx.request({
 
-      // url: "https://plantopia.wogengapp.cn/api/v1/plant_libraries",
-      url: "http://localhost:3000/api/v1/plant_libraries",
+      url: getApp().globalData.local_host + "/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
         console.log("hello",res)
@@ -100,7 +99,7 @@ Page({
     console.log(e.detail.value);
 
     wx.request({
-      url: `https://plantopia.wogengapp.cn/api/v1/plant_libraries?query=${query}`,
+      url: getApp().globalData.local_host + `/api/v1/plant_libraries?query=${query}`,
 
       method: "get",
       success: function (res) {

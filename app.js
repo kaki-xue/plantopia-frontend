@@ -34,5 +34,8 @@ App({
   //   })
   // },
   
-  globalData: {}
+  globalData: {
+    local_host: 'http://localhost:3000',
+    dokku_host: 'https://plantopia.wogengapp.cn'
+  }
 })

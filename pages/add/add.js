@@ -43,7 +43,7 @@ Page({
     console.log("global data", getApp().globalData)
     let page = this;
     wx.request({
-      url: `https://plantopia.wogengapp.cn/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("request on new", res)
@@ -130,19 +130,22 @@ Page({
     plant.nickname = event.detail.value.nickname
     plant.description = event.detail.value.description
     const user_id = getApp().globalData.userId
+
     plant.name = page.data.plant.name
     plant.water_frequency = page.data.plant.water_freq_avg
     plant.plant_library_id = page.data.plant.id
-    console.log('plant lib id', page.data.plant.id)
-
+    plant.user_id = user_id
     plant.image = page.data.plant.image
+  
 
+  
+  
     wx.request({
-      url: `https://plantopia.wogengapp.cn/api/v1/users/${user_id}/plants`,
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}/plants`,
       method: 'post',
       data: plant,
       success: function (res) {
-        console.log("success", res);
+        console.log("success la", res);
         const id = res.data.id
         wx.reLaunch({
           url: `/pages/myplants/myplants?id=${user_id}`,

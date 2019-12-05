@@ -1,6 +1,6 @@
 
 <view class="header">
-  <text class="header-bar">My plant babies </text><text></text><text style="color:#9dd8c8" class="fas fa-baby-carriage"></text>
+  <text class="header-bar">My plant babies \n</text><text style="color:#9dd8c8" class="fas fa-baby-carriage"></text>
 </view>
 
 <view class="container">

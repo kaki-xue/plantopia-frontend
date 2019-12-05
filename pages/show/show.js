@@ -18,9 +18,9 @@ Page({
   // goToFavorite: funtion() {},
   onLoad: function (options) {
     let page = this;
-   console.log("hey",options)
+   console.log("options from show page",options)
     wx.request({
-      url: `https://plantopia.wogengapp.cn/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("pll",res)
@@ -39,7 +39,20 @@ Page({
       url: `/pages/add/add?id=${id}`,
     })
   },
- 
+  // goToFav: function(event) {
+  //   let page = this;
+  //   let id = event.currentTarget.dataset.id
+  //   console.log("fav", id)
+  //   wx.request({
+  //     url: `https://localhost:3000/api/v1/plant_libraries/${id}`,
+  //     method: 'GET',
+  //     success(res) {
+  //       console.log("pll", res)
+  //       const plant = res.data;
+  //       page.setData(
+  //         plant
+  //       );
+  // },
 
   /**
    * Lifecycle function--Called when page is initially rendered

@@ -1,4 +1,4 @@
-// pages/myplant/myplant.js
+// pages/update/update.js
 Page({
 
   /**
@@ -12,13 +12,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
+    let page = this
     wx.request({
       url: getApp().globalData.local_host + `/api/v1/plants/${options.id}`,
       method: 'GET',
       success(res) {
-        
+        console.log("result on update", res)
         const plant = res.data;
+
         page.setData({
           plant: plant
         });
@@ -76,35 +77,40 @@ Page({
 
   },
 
-  removePlant: function (event) {
+  formSubmit: function (event) {
+    
     let page = this;
-    const plantId = page.data.plant.id;
+
+    console.log('page data', page.data)
+    let plant = {};
+    const plantId = page.data.plant.id
     const user_id = getApp().globalData.userId
+    plant.user_id = user_id
+    plant.nickname = event.detail.value.nickname
+    plant.image = page.data.plant.image
+    plant.water_frequency = page.data.plant.water_frequency
+    plant.plant_library_id = page.data.plant.plant_library_id
+    plant.description = event.detail.value.description
+    plant.name = page.data.plant.name
+    
 
     wx.showModal({
-      title: 'This will kill your baby',
+      title: 'This will edit your baby',
       content: 'Are you sure?',
-      confirmText: "Kill it!",
+      confirmText: "Edit!",
       showCancel: true,
       success: function (res) {
         wx.request({
-          url: getApp().globalData.local_host + `/api/v1/plants/${plantId}`,
-          method: 'DELETE',
+          url: getApp().globalData.local_host + `/api/v1/users/1/plants/${plantId}`,
+          method: 'put',
+          data: plant,
           success(result) {
             wx.reLaunch({
-              url: `/pages/myplants/myplants?id=${user_id}`
+              url: `/pages/myplant/myplant?id=${plantId}`
             })
           }
         });
       }
-    })
-  },
-
-  updatePlant: function (event) {
-    let page = this;
-    const plantId = page.data.plant.id;
-    wx.navigateTo({
-      url: `/pages/update/update?id=${plantId}`
     })
   }
 })

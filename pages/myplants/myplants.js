@@ -22,7 +22,23 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("what's this",options)
+    let page = this;
+    const user_id = getApp().globalData.userId
+    console.log('user id TOM', getApp().globalData.userId)
+
+    wx.request({
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      method: 'GET',
+      success(res) {
+        
+        const plants = res.data.plants;
+        page.setData({
+          plants: plants
+        });
+
+        wx.hideToast();
+      }
+    });
 
   },
 
@@ -37,7 +53,21 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    let page = this;
+    const user_id = getApp().globalData.userId
 
+    wx.request({
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      method: 'GET',
+      success(res) {
+        const plants = res.data.plants;
+        page.setData({
+          plants: plants
+        });
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**

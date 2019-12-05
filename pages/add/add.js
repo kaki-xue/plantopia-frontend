@@ -42,7 +42,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.dokku_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("request on new", res)
@@ -140,7 +140,7 @@ Page({
   
   
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/users/${user_id}/plants`,
+      url: getApp().globalData.dokku_host + `/api/v1/users/${user_id}/plants`,
       method: 'post',
       data: plant,
       success: function (res) {

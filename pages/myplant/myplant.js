@@ -22,7 +22,6 @@ Page({
         page.setData({
           plant: plant
         });
-        console.log('page data from individual plant', page.data)
         wx.hideToast();
       }
     });
@@ -75,5 +74,31 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  removePlant: function (event) {
+    let page = this;
+    const plantId = page.data.plant.id;
+    const user_id = getApp().globalData.userId
+
+    wx.showModal({
+      title: 'This will kill your baby',
+      content: 'Are you sure?',
+      confirmText: "Kill it!",
+      showCancel: true,
+      success: function (res) {
+        wx.request({
+          url: getApp().globalData.local_host + `/api/v1/plants/${plantId}`,
+          method: 'DELETE',
+          success(result) {
+            wx.navigateBack({
+              url: `/pages/myplants/myplants?id=${user_id}`
+            })
+          }
+        });
+      }
+    })
+    
+    
   }
 })

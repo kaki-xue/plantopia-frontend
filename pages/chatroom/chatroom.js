@@ -47,22 +47,56 @@ Page({
 
   waterMe: function () {
     let page = this
-    
-    let msg = {}
+    let plant_chat_id=page.data.plant_chat_id
+    let usermsg = {}
     page.setData({
       user_msg_watered: "Hey buddy, just watered ya!"
     })
-    msg.is_user = true
-    msg.text = "Hey buddy, just watered ya!"
-    msg.plant_chat_id= page.dataplant_chat_id
-   console.log("msg",msg)
+    usermsg.is_user = true
+    usermsg.text = page.data.user_msg_watered
+    usermsg.plant_chat_id= plant_chat_id
+   console.log("msg",usermsg)
+    wx.request({
+      url:`http://localhost:3000/api/v1/plant_chats/${plant_chat_id}/messages`,
+      method: 'post',
+      data: usermsg,
+      success: function (res) {
+        console.log("success", res);
+        const usermsg_id = res.data.id
+        page.setData({
+          usermsg_id: usermsg_id
+        })
+        console.log("usermsg",usermsg_id)
+      }
+    })
 
   },
 
   delayWater: function () {
     let page = this
+    let plant_chat_id = page.data.plant_chat_id
+    let usermsg = {}
+
     page.setData({
       user_msg_delay: "Hold on there, I'll water you later"
+    })
+
+    usermsg.is_user = true
+    usermsg.text = page.data.user_msg_delay
+    usermsg.plant_chat_id = plant_chat_id
+    console.log("msg", usermsg)
+    wx.request({
+      url: `http://localhost:3000/api/v1/plant_chats/${plant_chat_id}/messages`,
+      method: 'post',
+      data: usermsg,
+      success: function (res) {
+        console.log("success", res);
+        const usermsg_id = res.data.id
+        page.setData({
+          usermsg_id: usermsg_id
+        })
+        console.log("usermsg", usermsg_id)
+      }
     })
   },
 

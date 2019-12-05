@@ -9,8 +9,9 @@ Page({
   },
 
   goToChatroom: function (e) {
+    const plantId = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '/pages/chatroom/chatroom',
+      url: `/pages/chatroom/chatroom?plant_id=${plantId}`,
     })
   },
   gotToDetail: function (options) {
@@ -27,7 +28,8 @@ Page({
     const user_id = getApp().globalData.userId
 
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      url: getApp().globalData.local_host + '/api/v1/users/1',
+      // `/api/v1/users/${user_id}`,
       method: 'GET',
       success(res) {
         
@@ -58,7 +60,8 @@ Page({
     const user_id = getApp().globalData.userId
 
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      url: getApp().globalData.local_host + '/api/v1/users/1',
+      // `/api/v1/users/${user_id}`,
       method: 'GET',
       success(res) {
         const plants = res.data.plants;

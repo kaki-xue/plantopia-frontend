@@ -17,7 +17,7 @@
         <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
       </view>
       <view>
-        <view class="fas fa-heart-broken"></view>
+        <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-heart-broken"></view>
       </view>
     </view>
    </view>

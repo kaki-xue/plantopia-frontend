@@ -25,17 +25,11 @@ App({
       }
     })
   },
-  // const app = getApp()
-  //   getUserInfo: function (e) {
-  //   console.log(e)
-  //   app.globalData.userInfo = e.detail.userInfo
-  //   this.setData({
-  //     userInfo: e.detail.userInfo
-  //   })
-  // },
+
   
   globalData: {
     local_host: 'http://localhost:3000',
     dokku_host: 'https://plantopia.wogengapp.cn'
   }
+
 })

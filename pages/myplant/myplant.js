@@ -12,7 +12,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let page = this;
+    wx.request({
+      url: getApp().globalData.local_host + `/api/v1/plants/${options.id}`,
+      method: 'GET',
+      success(res) {
+        
+        const plant = res.data;
+        page.setData({
+          plant: plant
+        });
+        console.log('page data from individual plant', page.data)
+        wx.hideToast();
+      }
+    });
   },
 
   /**

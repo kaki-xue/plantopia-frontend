@@ -18,12 +18,10 @@ Page({
   // goToFavorite: funtion() {},
   onLoad: function (options) {
     let page = this;
-   console.log("options from show page",options)
     wx.request({
       url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
-        console.log("pll",res)
         const plant = res.data;
         page.setData(
           plant
@@ -32,6 +30,7 @@ Page({
       }
     });
   },
+  
   goToAdd: function (event) {
     let id = event.currentTarget.dataset.id;
     console.log("id", id)

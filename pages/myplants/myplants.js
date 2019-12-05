@@ -13,16 +13,34 @@ Page({
       url: '/pages/chatroom/chatroom',
     })
   },
-  gotTodetail: function (event) {
+  gotToDetail: function (options) {
+    const plantId = options.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/myplant/myplant`
+      url: `/pages/myplant/myplant?id=${plantId}`
     })
   },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+    let page = this;
+    const user_id = getApp().globalData.userId
+
+    wx.request({
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      method: 'GET',
+      success(res) {
+        
+        const plants = res.data.plants;
+        console.log('page data', page.data)
+        page.setData({
+          plants: plants
+        });
+
+        wx.hideToast();
+      }
+    });
+
   },
 
   /**
@@ -36,7 +54,22 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    let page = this;
+    const user_id = getApp().globalData.userId
 
+    wx.request({
+      url: getApp().globalData.local_host + `/api/v1/users/${user_id}`,
+      method: 'GET',
+      success(res) {
+        const plants = res.data.plants;
+        console.log('page data', page.data)
+        page.setData({
+          plants: plants
+        });
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**

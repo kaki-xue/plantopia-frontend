@@ -11,6 +11,14 @@
 
 }
 
+.update-remove-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65px;
+  margin-top: 20px;
+}
+
 .fas {
   font-size:30px;
 }

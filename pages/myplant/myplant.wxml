@@ -33,8 +33,11 @@
         <view class="p"> {{plant.description}}</view>
       </view>
     </view>
- 
-    <view bindtap="removePlant" class="fas fa-trash-alt"></view>
+
+    <view class="update-remove-container">
+      <view bindtap="removePlant" class="fas fa-trash-alt"></view>
+      <view bindtap="updatePlant" class="fas fa-pen-square"></view>
+    </view>
     
   </view>
 </view>

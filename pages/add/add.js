@@ -40,7 +40,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("global data", getApp().globalData)
     let page = this;
     wx.request({
       url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,

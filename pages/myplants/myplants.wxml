@@ -7,14 +7,14 @@
 
   <view wx:for="{{plants}}" wx:for-index="index" wx:key wx:for-item="plant" class="cards">
 <!-- insert in image tag data-id={{plant.id}} -->
-    <image bindtap="goToChatroom" src="{{plant.image}}"></image>
+    <image bindtap="gotToDetail" data-id="{{plant.id}}" src="{{plant.image}}"></image>
   
     <view class="card-trip-infos">
       <view>
         <view>{{plant.nickname}}</view>
       </view>
       <view>
-        <view bindtap="gotTodetail" class="fas fa-info-circle"></view>
+        <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
       </view>
       <view>
         <view class="fas fa-heart-broken"></view>

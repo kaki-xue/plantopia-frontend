@@ -24,15 +24,23 @@ block wx:for -->
    <view class="chatroom-space">
    
       <view wx:for="{{allmsg}}" wx:for-item="msg"  >
+
         <view wx:if="{{msg.is_user && msg.text === user_msg_watered}}" class="btn-user">{{msg.text}}</view> 
+
         <view wx:if="{{msg.is_user && msg.text === user_msg_delay}}" class="btn-user">{{msg.text}}</view> 
-        <view wx:if="{{msg.text=='Thank you! I am happy! :D'}}" class="btn-plant"> {{msg.text}} </view> 
+
+        <view wx:if="{{msg.text===plant_msg_watered}}" class="btn-plant"> {{msg.text}} </view> 
+
+        <view wx:if="{{msg.text===plant_msg_delay}}" class="btn-plant"> {{msg.text}} </view> 
+        
       </view>
-      
+
+   </view>
+
    </view>
 
 
-  </view>
+
 
 
   <!-- <view wx:if="{{condition}}"> True </view> -->

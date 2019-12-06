@@ -9,21 +9,12 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
                 <view class="weui-cell__bd">
-                  <input name="nickname" placeholder="please input a nickname"/>
+                  <input name="nickname" placeholder="Input a nickname"/>
                 </view>
             </view>
            <view class="weui-cells__title"></view>
        
-            
-           
-            <view class="weui-cell ">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">Description</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input name="description" placeholder="About your plant"/>
-                </view>
-            </view>
+    
 
         <view class="weui-cells__title">Description</view>
           <view class="weui-cells weui-cells_after-title">

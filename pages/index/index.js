@@ -35,7 +35,7 @@ Page({
     let page = this;
     wx.request({
 
-      url: getApp().globalData.dokku_host + "/api/v1/plant_libraries",
+      url: getApp().globalData.host + "/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
         console.log("hello",res)
@@ -106,7 +106,7 @@ Page({
     console.log(e.detail.value);
 
     wx.request({
-      url: getApp().globalData.dokku_host + `/api/v1/plant_libraries?query=${query}`,
+      url: getApp().globalData.host + `/api/v1/plant_libraries?query=${query}`,
 
       method: "get",
       success: function (res) {

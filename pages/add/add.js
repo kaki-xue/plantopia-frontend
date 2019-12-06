@@ -1,7 +1,6 @@
 // pages/add/add.js
 
 const app = getApp()
-const AV = require('../../utils/av-weapp-min.js');
 
 const date = new Date()
 const years = []
@@ -11,6 +10,10 @@ const days = []
 for (let i = 1990; i <= date.getFullYear(); i++) {
   years.push(i)
 }
+
+wx.request({
+  url: '3000/users/${user_id}/plant_libraries/${plant-}',
+})
 
 for (let i = 1; i <= 12; i++) {
   months.push(i)
@@ -43,7 +46,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     wx.request({
-      url: getApp().globalData.host + `/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.dokku_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("request on new", res)
@@ -135,13 +138,13 @@ Page({
     plant.water_frequency = page.data.plant.water_freq_avg
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id
-    plant.image = page.data.imageUrl
+    plant.image = page.data.plant.image
   
 
   
   
     wx.request({
-      url: getApp().globalData.host + `/api/v1/users/${user_id}/plants`,
+      url: getApp().globalData.dokku_host + `/api/v1/users/${user_id}/plants`,
       method: 'post',
       data: plant,
       success: function (res) {
@@ -151,37 +154,6 @@ Page({
           url: `/pages/myplants/myplants?id=${user_id}`,
         })
       }
-    })
-  },
-
-  takePhoto: function () {
-    let page = this
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-        let tempFilePath = res.tempFilePaths[0];
-          page.setData({
-            tempFilePath: tempFilePath
-          });
-        new AV.File('file-name', {
-          blob: {
-            uri: tempFilePath,
-          },
-        }).save().then(
-          file => {
-            const imageUrl = file.url()
-            page.setData({
-              imageUrl: imageUrl
-            });
-            console.log('image URL', page.data.imageUrl)
-          }
-        ).catch(console.error);}
-    });
-    wx.previewImage({
-      current: page.imageUrl, // The http link of the current image
-      urls: [page.imageUrl] // The http links of the images to preview
     })
   }
 })

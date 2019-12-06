@@ -10,13 +10,10 @@ AV.init({
 });
 
 App({
-  globalData: {
-    // host: 'http://localhost:3000'
-    host: 'https://plantopia.wogengapp.cn'
-  },
-
+ 
   onLaunch: function () {
-    const host = globalData.host
+    const host = this.globalData.host
+    const app = this;
     console.log('beginning login')
     wx.login({
       success: (res) => {
@@ -30,13 +27,20 @@ App({
           },
           // insert next code here
           success: (res) => {
-            console.log(res)
-            this.globalData.userId = res.data.userId
+            console.log('res', res)
+            app.globalData.userId = res.data.userId
           }
         })
 
       }
     })
-  }
+  },
+
+  globalData: {
+    host: 'http://localhost:3000',
+    userId: ''
+    // host: 'https://plantopia.wogengapp.cn'
+  },
+
 
 })

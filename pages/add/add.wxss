@@ -16,3 +16,20 @@
 .centre-text {
   text-align: center;
 }
+
+.weui-cells__title {
+  margin-top: 16px;
+  margin-bottom: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: rgba(0, 0, 0, 0.808);
+  font-size: 18px;
+}
+
+.weui-input {
+  height: 1.41176471em;
+  min-height: 1.41176471em;
+  line-height: 1.41176471;
+  font-size: 15px;
+}
+

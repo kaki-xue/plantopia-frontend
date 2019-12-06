@@ -1,4 +1,26 @@
 /**index.wxss**/
+.my-plant {
+  display:flex;
+  justify-content: center;
+  width:100vw;
+  position:sticky;
+  bottom:0;
+}
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 15px;
+  background:white;
+  transition: background 0.3s ease;
+  width:130px;
+  text-align: center;
+
+
+}
+.fas {
+  color:#4A4A4A;
+  font-size:25px;
+}
 
 .userinfo {
   display: flex;

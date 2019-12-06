@@ -13,9 +13,9 @@
       <view>
         <view>{{plant.nickname}}</view>
       </view>
-      <view>
+      <!-- <view>
         <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
-      </view>
+      </view> -->
       <view>
         <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-heart-broken"></view>
       </view>

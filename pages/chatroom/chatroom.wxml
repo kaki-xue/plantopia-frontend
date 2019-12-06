@@ -6,7 +6,7 @@
 
   <view class="chatroom">
    <view>
-    <view>2019-08-11</view>
+  
     <view class="btn btn-plant" >{{plant_msg_hi}}</view>
    </view>
     <view wx:if="{{user_msg_watered!==''}}"class="btn btn-user" >{{user_msg_watered}}</view> 

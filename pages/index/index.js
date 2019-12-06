@@ -17,6 +17,12 @@ Page({
       url: '../logs/logs'
     })
   },
+  goToMyPlant: function(e) {
+    console.log("event",e)
+    wx.navigateTo({
+      url: '/pages/myplants/myplants'
+    })
+  },
 
   goToShow: function (event) {
     let id = event.currentTarget.dataset.id;

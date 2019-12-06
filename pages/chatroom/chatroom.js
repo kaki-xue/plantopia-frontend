@@ -128,9 +128,9 @@ Page({
         console.log("success", res);
         const id = res.data.id
         console.log("chatroom-id:", id)
-        wx.reLaunch({
-          url: `/pages/chatroom/chatroom`,
-        })
+        // wx.reLaunch({
+        //   url: `/pages/chatroom/chatroom`,
+        // })
       }
     })
   },

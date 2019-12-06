@@ -1,6 +1,7 @@
 // pages/add/add.js
 
 const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
 
 const date = new Date()
 const years = []
@@ -134,7 +135,7 @@ Page({
     plant.water_frequency = page.data.plant.water_freq_avg
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id
-    plant.image = page.data.plant.image
+    plant.image = page.data.imageUrl
   
 
   
@@ -151,5 +152,29 @@ Page({
         })
       }
     })
+  },
+
+  takePhoto: function () {
+    let page = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => {
+            const imageUrl = file.url()
+            page.setData({
+              imageUrl: imageUrl
+            });
+            console.log('image URL', page.data.imageUrl)
+          }
+        ).catch(console.error);}
+    });
   }
 })

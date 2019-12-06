@@ -36,8 +36,8 @@ App({
   },
 
   globalData: {
-    // host: 'http://localhost:3000'
-    host: 'https://plantopia.wogengapp.cn'
+    host: 'http://localhost:3000'
+    // host: 'https://plantopia.wogengapp.cn'
   },
 
 })

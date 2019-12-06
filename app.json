@@ -8,7 +8,9 @@
     "pages/chatroom/chatroom",
     "pages/scan_result/scan_result",
     "pages/logs/logs",
-    "pages/update/update"
+    "pages/update/update",
+    "pages/mycollection/mycollection"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

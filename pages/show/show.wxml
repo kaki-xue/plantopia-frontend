@@ -7,6 +7,7 @@
       <view>
         <view class="h2">{{name}}</view>
         <view class="p">Water me every {{water_freq_avg}} days</view>
+        <view>{{description}}</view>
       </view>
       <view class="button-sp-area">
             <!-- <button class="weui-btn mini-btn" type="primary" size="mini">add</button> -->

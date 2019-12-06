@@ -49,7 +49,7 @@ Page({
    plant_chat.plant_id=plant_id
    console.log("page onload")
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/plant_chats`,
+      url: getApp().globalData.host + `/api/v1/plant_chats`,
       method: 'post',
       data: plant_chat,
       success: function (res) {
@@ -78,7 +78,7 @@ Page({
     usermsg.plant_chat_id= plant_chat_id
    console.log("msg",usermsg)
     wx.request({
-      url:getApp().globalData.local_host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
+      url:getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
       method: 'post',
       data: usermsg,
       success: function (res) {
@@ -111,7 +111,7 @@ Page({
     usermsg.plant_chat_id = plant_chat_id
     console.log("msg", usermsg)
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
+      url: getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
       method: 'post',
       data: usermsg,
       success: function (res) {

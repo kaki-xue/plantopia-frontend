@@ -5,38 +5,39 @@
   </view>
     <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
       <form bindsubmit="formSubmit" class="weui-form">
+      <view class="weui-cells__title">Nickname</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">Nickname</view>
-                </view>
                 <view class="weui-cell__bd">
-                    <input name="nickname" placeholder="please input a nickname"/>
+                  <input name="nickname" placeholder="Input a nickname"/>
                 </view>
             </view>
            <view class="weui-cells__title"></view>
        
-            
-           
+    
+
+        <view class="weui-cells__title">Description</view>
+          <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">Description</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input name="description" placeholder="About your plant"/>
-                </view>
+              <view class="weui-cell__bd">
+                <input name="description" class="weui-input" placeholder="About your plant" />
+              </view>
             </view>
 
-            <!-- <view class="weui-cells__title">Description</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell ">
-                <view class="weui-cell__bd">
-                  <input name="description" class="weui-input" placeholder="About your plant" />
-                </view>
-            </view>
-        </view> -->
-      </view>
-      <view class="weui-btn-area">
+          </view>
+        </view>
+        <view class="form-margin">
+          <view class="weui-cells__title">Image</view>
+           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>
+           <view class="weui-cells weui-cells_after-title">
+             <view class="weui-cell"> 
+              <view class="weui-cell__bd">
+                <button bindtap="takePhoto">Choose Image</button>
+              </view>
+             </view>
+           </view>   
+        </view>
+        <view class="weui-btn-area">
             <button class="weui-btn" type="primary" form-type="submit">Submit</button>
         </view>
     </form>

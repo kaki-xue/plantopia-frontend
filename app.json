@@ -16,6 +16,38 @@
     "navigationBarTitleText": "Plantopia",
     "navigationBarTextStyle": "black"
   },
+    "tabBar": {
+      "color": "gb(9, 7, 35)e",
+      "selectedColor": "rgb(9, 7, 35)",
+      "backgroundColor": "white;",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "img/book-new.png",
+          "selectedIconPath": "img/book-new.png",
+          "text": "Library"
+        },
+        {
+          "pagePath": "pages/myplants/myplants",
+          "iconPath": "img/seedling-new.png",
+          "selectedIconPath": "img/seedling-new.png",
+          "text": "My Plants"
+        },
+        {
+          "pagePath": "pages/add/add",
+          "iconPath": "img/user-new.png",
+          "selectedIconPath": "img/user-new.png",
+          "text": "User"
+        },
+        {
+          "pagePath": "pages/scan_result/scan_result",
+          "iconPath": "img/camera-new.png",
+          "selectedIconPath": "img/camera-new.png",
+          "text": "Scan"
+        }
+      ]
+    },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+  
 }

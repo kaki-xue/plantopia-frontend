@@ -11,7 +11,8 @@ AV.init({
 
 App({
   onLaunch: function () {
-    const host = globalData.host
+    const host = this.globalData.host
+    const app = this;
     console.log('beginning login')
     wx.login({
       success: (res) => {
@@ -34,7 +35,7 @@ App({
     })
   },
 
-   globalData: {
+  globalData: {
     // host: 'http://localhost:3000'
     host: 'https://plantopia.wogengapp.cn'
   },

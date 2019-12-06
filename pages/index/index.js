@@ -34,7 +34,6 @@ Page({
 
     let page = this;
     wx.request({
-
       url: getApp().globalData.host + "/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
@@ -106,7 +105,6 @@ Page({
 
     wx.request({
       url: getApp().globalData.host + `/api/v1/plant_libraries?query=${query}`,
-
       method: "get",
       success: function (res) {
         console.log("res",res)

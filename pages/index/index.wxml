@@ -38,11 +38,11 @@
   </view>
 </view>
 
-<view class="my-plant" bindtap="goToMyPlant">
+<!-- <view class="my-plant" bindtap="goToMyPlant">
   <view class="btn-flat" >
     <text class="fas fa-seedling"></text>
   </view>
-</view>
+</view> -->
 
 
 

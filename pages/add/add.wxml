@@ -5,12 +5,13 @@
   </view>
     <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
       <form bindsubmit="formSubmit" class="weui-form">
+
       <view class="weui-cells__title">Nickname</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
-                <view class="weui-cell__bd">
-                  <input name="nickname" placeholder="Input a nickname"/>
-                </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="nickname" placeholder="Input a nickname"/>
+              </view>
             </view>
            <view class="weui-cells__title"></view>
        

@@ -44,6 +44,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log('options', options)
     let page = this;
     wx.request({
       url: getApp().globalData.dokku_host + `/api/v1/plant_libraries/${options.id}`,
@@ -70,8 +71,8 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-
+  onShow: function (options) {
+    console.log('options on show', options)
   },
 
   /**

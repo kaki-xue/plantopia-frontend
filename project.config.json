@@ -114,6 +114,13 @@
 					"id": -1,
 					"name": "pages/update/update",
 					"pathName": "pages/update/update",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mycollection/mycollection",
+					"pathName": "pages/mycollection/mycollection",
 					"scene": null
 				}
 			]

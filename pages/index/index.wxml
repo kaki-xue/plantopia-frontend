@@ -1,7 +1,6 @@
 <!--index.wxml-->
 <!-- <navigator url="pages/chatroom/chatroom"><button>chatroom</button></navigator> -->
-<button bindtap="goToChat">chatroom</button>
-<button bindtap="goToBabies">me babies</button>
+
 <!-- banner -->
 <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1574741690638-84dc0244851a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=983&q=80)">
   Plantopia.
@@ -40,6 +39,11 @@
   </view>
 </view>
 
+<view class="my-plant" bindtap="goToMyPlant">
+  <view class="btn-flat" >
+    <text class="fas fa-seedling"></text>
+  </view>
+</view>
 
 
 

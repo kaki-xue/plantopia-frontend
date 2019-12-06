@@ -15,7 +15,7 @@ Page({
     let page = this
     const user_id = getApp().globalData.userId
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/users/${user_id}/plants/${options.id}`,
+      url: getApp().globalData.dokku_host + `/api/v1/users/${user_id}/plants/${options.id}`,
       method: 'GET',
       success(res) {
         console.log("result on update", res)

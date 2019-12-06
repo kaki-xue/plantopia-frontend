@@ -21,7 +21,7 @@ Page({
     let page = this
     let plant_chat_id = page.data.plant_chat_id
     wx.request({
-      url: getApp().globalData.local_host + `/api/v1/plant_chats/${plant_chat_id}/messages/`,
+      url: getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages/`,
       method: 'GET',
       success(res) {
         // check if messages in response have more messages than page data

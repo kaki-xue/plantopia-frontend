@@ -10,6 +10,7 @@ AV.init({
 });
 
 App({
+
   onLaunch: function () {
     const host = this.globalData.host
     const app = this;
@@ -26,8 +27,8 @@ App({
           },
           // insert next code here
           success: (res) => {
-            console.log(res)
-            this.globalData.userId = res.data.userId
+            console.log('res', res)
+            app.globalData.userId = res.data.userId
           }
         })
 
@@ -39,5 +40,7 @@ App({
     host: 'http://localhost:3000',
     // host: 'https://plantopia.wogengapp.cn'
   },
+
+
 
 })

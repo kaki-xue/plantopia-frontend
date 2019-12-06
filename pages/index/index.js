@@ -37,7 +37,6 @@ Page({
       url: getApp().globalData.host + "/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
-        console.log("hello",res)
         const plant_libraries = res.data.plant_libraries;
         page.setData({
           plant_libraries: plant_libraries

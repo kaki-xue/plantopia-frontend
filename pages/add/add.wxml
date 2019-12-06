@@ -28,15 +28,16 @@
         </view>
         <view class="form-margin">
           <view class="weui-cells__title">Image</view>
+           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>
            <view class="weui-cells weui-cells_after-title">
-             <view class="weui-cell">
+             <view class="weui-cell"> 
               <view class="weui-cell__bd">
-            <button bindtap="takePhoto" >Upload Image</button>
+                <button bindtap="takePhoto">Choose Image</button>
               </view>
              </view>
            </view>   
         </view>
-      <view class="weui-btn-area">
+        <view class="weui-btn-area">
             <button class="weui-btn" type="primary" form-type="submit">Submit</button>
         </view>
     </form>

@@ -162,6 +162,9 @@ Page({
       sourceType: ['album', 'camera'],
       success: function (res) {
         let tempFilePath = res.tempFilePaths[0];
+          page.setData({
+            tempFilePath: tempFilePath
+          });
         new AV.File('file-name', {
           blob: {
             uri: tempFilePath,
@@ -176,5 +179,9 @@ Page({
           }
         ).catch(console.error);}
     });
+    wx.previewImage({
+      current: page.imageUrl, // The http link of the current image
+      urls: [page.imageUrl] // The http links of the images to preview
+    })
   }
 })

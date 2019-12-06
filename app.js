@@ -10,11 +10,6 @@ AV.init({
 });
 
 App({
-  globalData: {
-    // host: 'http://localhost:3000'
-    host: 'https://plantopia.wogengapp.cn'
-  },
-
   onLaunch: function () {
     const host = globalData.host
     console.log('beginning login')
@@ -37,6 +32,11 @@ App({
 
       }
     })
-  }
+  },
+
+   globalData: {
+    // host: 'http://localhost:3000'
+    host: 'https://plantopia.wogengapp.cn'
+  },
 
 })

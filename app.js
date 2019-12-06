@@ -2,7 +2,7 @@
 App({
   onLaunch: function () {
     // const host = 'https://plantopia.wogengapp.cn'
-    const host = 'https://plantopia.wogengapp.cn'
+    const host = 'http://localhost:3000'
     console.log('beginning login')
     wx.login({
       success: (res) => {

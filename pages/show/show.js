@@ -19,7 +19,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     wx.request({
-      url: getApp().globalData.dokku_host + `/api/v1/plant_libraries/${options.id}`,
+      url: getApp().globalData.local_host + `/api/v1/plant_libraries/${options.id}`,
       method: 'GET',
       success(res) {
         const plant = res.data;

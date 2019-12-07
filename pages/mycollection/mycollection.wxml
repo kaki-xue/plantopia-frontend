@@ -3,9 +3,9 @@
   <view class="far fa-heart"></view>
 </view>
 
-<view wx:for="{{mylikes}}" wx:for-item="like" class="fav-card"> 
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{like.image}})">
- {{like.name}}
+<view wx:for="{{favorite}}" wx:for-item="fav" class="fav-card"> 
+  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{fav.image}})">
+ {{fav.name}}
   </view>
 </view>
 

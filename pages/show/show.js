@@ -51,6 +51,9 @@ Page({
         app.globalData.favorite = favorite;
       }
     })
+    wx.navigateTo({
+      url: '/pages/mycollection/mycollection'
+    })
   },
   /**
    * Lifecycle function--Called when page is initially rendered

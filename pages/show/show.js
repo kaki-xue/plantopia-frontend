@@ -32,8 +32,7 @@ Page({
 
   goToAdd: function(event) {
     let id = event.currentTarget.dataset.id;
-    console.log("id", id)
-    wx.navigateTo({
+    wx.reLaunch({
       url: `/pages/add/add?id=${id}`,
     })
   },

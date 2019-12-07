@@ -12,6 +12,13 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
+
+  goToMyfav: function() {
+  wx.navigateTo({
+    url: '/pages/mycollection/mycollection',
+  })
+  },
+
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
@@ -34,7 +41,6 @@ Page({
 
     let page = this;
     wx.request({
-
       url: getApp().globalData.host + "/api/v1/plant_libraries",
       method: 'GET',
       success(res) {
@@ -106,7 +112,6 @@ Page({
 
     wx.request({
       url: getApp().globalData.host + `/api/v1/plant_libraries?query=${query}`,
-
       method: "get",
       success: function (res) {
         console.log("res",res)

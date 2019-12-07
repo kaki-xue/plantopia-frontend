@@ -3,13 +3,13 @@
     margin: 0 4px;
 }
 .plant-card {
-  height: 100vh;
+  /* height: 100vh; */
 }
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 100vh;
+  
 }
 
 image {
@@ -37,6 +37,7 @@ image {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  flex-direction: column;
 }
 
 .card-trip-infos .card-trip-user {
@@ -44,5 +45,9 @@ image {
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.button-area {
+  margin:10px auto;
 }
  

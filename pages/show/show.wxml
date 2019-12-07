@@ -12,7 +12,7 @@
       <view class="button-area">
           <!-- <button class="weui-btn mini-btn" type="primary" size="mini">add</button> -->
           <!-- <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToFav" data-id="{{id}}">like</button> -->
-          <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button>
+          <!-- <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button> -->
       </view>
 
       <view class="button-sp-area">

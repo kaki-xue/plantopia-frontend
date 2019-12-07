@@ -1,6 +1,4 @@
-// pages/mycollection/mycollection.js
-let app = getApp();
-
+// utils/av-weapp-min.js.js
 Page({
 
   /**
@@ -14,30 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
-
-    this.setData({
-      favorite: app.globalData.favorite
-    });
-
-    // const user_id = getApp().globalData.userId
-    // console.log("gloabl",user_id)
-
-
-    const user_id = getApp().globalData.userId
-    console.log("gloabl",user_id)
-
-    // wx.request({
-    //   url: getApp().globalData.host + `/api/v1/users/${user_id}/plant_libraries`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const mylikes = res.data.plant_libraries;
-    //     console.log('mylikes', mylikes)
-    //     page.setData({
-    //       mylikes
-    //     })
-    //   }
-    // })
 
   },
 

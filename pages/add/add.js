@@ -1,6 +1,7 @@
 // pages/add/add.js
 
 const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
 
 const date = new Date()
 const years = []
@@ -35,6 +36,24 @@ Page({
     value: [9999, 11, 11],
     startDate: 'Press here',
     timeData: 'Press here'
+  },
+
+  takePhoto: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => console.log(file.url())
+        ).catch(console.error);
+      }
+    });
   },
 
   /**
@@ -142,7 +161,7 @@ Page({
   
   
     wx.request({
-      url: getApp().globalData.dokku_host + `/api/v1/users/${user_id}/plants`,
+      url: getApp().globalData.host + `/api/v1/users/${user_id}/plants`,
       method: 'post',
       data: plant,
       success: function (res) {

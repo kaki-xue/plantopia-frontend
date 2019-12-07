@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-
+  
   },
 
   /**
@@ -15,10 +15,12 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    this.setData({
-      favorite: app.globalData.favorite
-    });
+    let fav = app.globalData
+    // page.setData({
+    //   favorite: app.globalData.favorite
+    // });
 
+    console.log("thispage",fav);
     // const user_id = getApp().globalData.userId
     // console.log("gloabl",user_id)
 

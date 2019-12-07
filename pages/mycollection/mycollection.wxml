@@ -3,29 +3,13 @@
   <view class="far fa-heart"></view>
 </view>
 
-<view class="fav-card"> 
-
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Flower
+<view wx:for="{{mylikes}}" wx:for-item="like" class="fav-card"> 
+  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{like.image}})">
+ {{like.name}}
   </view>
 </view>
 
-<view class="fav-card"> 
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Flower
-  </view>
-</view>
 
-<view class="fav-card"> 
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Flower
-  </view>
-</view>
 
-<view class="fav-card"> 
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Flower
-  </view>
-</view>
 
 

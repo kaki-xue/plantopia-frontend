@@ -46,9 +46,13 @@ Page({
       url: `http://localhost:3000/users/${user_id}/plant_libraries/${plant_library_id}`,
       method: 'POST',
       success(res) {
-        console.log("pll", res)
-        const plant = res.data;
+        console.log("result", res.data.favorite)
+        const favorite = res.data.favorite;
+        app.globalData.favorite = favorite;
       }
+    })
+    wx.navigateTo({
+      url: '/pages/mycollection/mycollection'
     })
   },
   /**

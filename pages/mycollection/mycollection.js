@@ -1,4 +1,6 @@
 // pages/mycollection/mycollection.js
+let app = getApp();
+
 Page({
 
   /**
@@ -13,8 +15,18 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
+
+    this.setData({
+      favorite: app.globalData.favorite
+    });
+
+    // const user_id = getApp().globalData.userId
+    // console.log("gloabl",user_id)
+
+
     const user_id = getApp().globalData.userId
     console.log("gloabl",user_id)
+
     // wx.request({
     //   url: getApp().globalData.host + `/api/v1/users/${user_id}/plant_libraries`,
     //   method: 'GET',

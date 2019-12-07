@@ -12,9 +12,6 @@ for (let i = 1990; i <= date.getFullYear(); i++) {
   years.push(i)
 }
 
-wx.request({
-  url: '3000/users/${user_id}/plant_libraries/${plant-}',
-})
 
 for (let i = 1; i <= 12; i++) {
   months.push(i)

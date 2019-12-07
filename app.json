@@ -9,7 +9,8 @@
     "pages/scan_result/scan_result",
     "pages/logs/logs",
     "pages/update/update",
-    "pages/mycollection/mycollection"
+    "pages/mycollection/mycollection",
+    "utils/av-weapp-min.js"
 
   ],
   "window": {

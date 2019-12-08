@@ -52,7 +52,9 @@ takePhoto: function () {
           // let base64 = 'data:image/jpg;base64,' + wx.arrayBufferToBase64(res.data);
           let base64 = wx.arrayBufferToBase64(res.data);
           console.log("base64",base64);
- 
+
+          
+          //  getapi info
           wx.request({
             url: 'https://plant.market.alicloudapi.com/plant/recognize2',
             // url: 'http://plantgw.nongbangzhu.cn/plant/recognize2',

@@ -39,21 +39,35 @@ Page({
   },
 
   takePhoto: function () {
+    let page = this
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: function (res) {
         let tempFilePath = res.tempFilePaths[0];
+        page.setData({
+          tempFilePath: tempFilePath
+        });
         new AV.File('file-name', {
           blob: {
             uri: tempFilePath,
           },
         }).save().then(
-          file => console.log(file.url())
+          file => {
+            const imageUrl = file.url()
+            page.setData({
+              imageUrl: imageUrl
+            });
+            console.log('image URL', page.data.imageUrl)
+          }
         ).catch(console.error);
       }
     });
+    wx.previewImage({
+      current: page.imageUrl, // The http link of the current image
+      urls: [page.imageUrl] // The http links of the images to preview
+    })
   },
 
   /**
@@ -155,7 +169,7 @@ Page({
     plant.water_frequency = page.data.plant.water_freq_avg
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id
-    plant.image = page.data.plant.image
+    plant.image = page.data.imageUrl
   
 
   

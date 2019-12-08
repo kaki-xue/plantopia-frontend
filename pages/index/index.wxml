@@ -33,7 +33,7 @@
 <view class="plant-cards">
   <view wx:for="{{plant_libraries}}" wx:for-index="index" wx:key wx:for-item="plant" >
   <view class="plant" style="background-image: url({{plant.image}})" bindtap="goToShow" data-id="{{plant.id}}">
-  <view class="plant-text"> {{plant.name}}</view>
+  <view class="plant-text"> {{plant.latin_name}}</view>
   </view>
   </view>
 </view>

@@ -1,0 +1,5 @@
+/* pages/new/new.wxss */
+.weui-cells__title {
+  font-size: 20px;
+  font-weight: bold;
+}

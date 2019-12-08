@@ -2,13 +2,15 @@
 
 <view class="card-center">
   <view class="plant-card">
-    <image class="main-img" src="https://images.unsplash.com/photo-1554631221-f9603e6808be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80 "></image>
-    <view class="plant-info">
-      <view class="plant-name">cactus</view>
-      <view>this is a plant</view>
+
+    <image class="main-img" src="{{scanimage}}"></image>
+    <view class="under-img">
+          <view class="plant-name">{{scanname}}</view>
+          <view class="fas fa-pen-square" bindtap="goToLibrary"></view>
     </view>
   </view>
 </view>
+
 
   <view class="form-margin">
   <!-- <view class="weui-cells__title">Image</view>

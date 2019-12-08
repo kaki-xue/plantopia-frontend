@@ -14,7 +14,7 @@
       <text  class="fas fa-leaf"></text>
       <view class="card-product-infos">
         <view class="h2">Genus</view>
-        <view class="p">{{plant.name}} </view>
+        <view class="p">{{plant.latin_name}} </view>
       </view>
     </view>
 

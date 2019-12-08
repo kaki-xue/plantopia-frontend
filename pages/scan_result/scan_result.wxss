@@ -1,4 +1,17 @@
+.fas {
+  color:white;
+  font-size:40px;
+  padding:0 15px;
+}
 /* pages/scan_result/scan_result.wxss */
+.fa-pen-square {
+  color:#1CE2A7;
+}
+.under-img {
+  display:flex;
+  justify-content: space-between;
+  margin:20px;
+}
 .plant-card {
   height:400px;
   width:320px;
@@ -38,11 +51,6 @@
   transition: background 0.3s ease;
   width:200px;
   text-align: center;
-}
-.fas {
-  color:white;
-  font-size:40px;
-  padding:0 15px;
 }
 
 .try {

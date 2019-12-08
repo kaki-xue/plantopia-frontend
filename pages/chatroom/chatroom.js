@@ -47,12 +47,13 @@ Page({
   onLoad: function (options) {
    const app = getApp()
    let page=this
+   
    let plant_chat={}
    let plant_id = options.plant_id
-   let user_id = app.globalData.userId
+  //  let user_id = app.globalData.userId
+  let user_id = 1
    plant_chat.user_id=user_id
    plant_chat.plant_id=plant_id
-   console.log("page onload")
     wx.request({
       url: getApp().globalData.host + `/api/v1/plant_chats`,
       method: 'post',
@@ -63,24 +64,21 @@ Page({
         page.setData({
           plant_chat_id: plant_chat_id
         })
+        page.fetchMessages()
       }
-    
     })
-
-    page.fetchMessages()
-  
   },
 
 
   // water & delay-button function
   waterMe: function () {
     let page = this
-    let plant_chat_id=page.data.plant_chat_id
+    let plant_chat_id = page.data.plant_chat_id
     let usermsg = {}
   
     usermsg.is_user = true
     usermsg.text = page.data.user_msg_watered
-    usermsg.plant_chat_id= plant_chat_id
+    usermsg.plant_chat_id = plant_chat_id
    console.log("msg",usermsg)
     wx.request({
       url:getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,

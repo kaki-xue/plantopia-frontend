@@ -25,6 +25,8 @@ Page({
         page.setData(
           plant
         );
+
+        console.log("plant",plant)
         wx.hideToast();
       }
     });

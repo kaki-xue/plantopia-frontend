@@ -1,7 +1,7 @@
+<!--pages/new/new.wxml-->
 <!-- form to add plant_library_id to my plant -->
- <view class="weui-cells__title">My Plant</view>
+ <view class="weui-cells__title">New Member</view>
   <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})">
-    <view class="centre-text">{{plant.latin_name}}</view>
   </view>
     <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
       <form bindsubmit="formSubmit" class="weui-form">
@@ -13,7 +13,24 @@
                 <input class="weui-input" name="nickname" placeholder="Input a nickname"/>
               </view>
             </view>
-           <view class="weui-cells__title"></view>
+
+            <view class="weui-cells__title">Latin name</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="name" placeholder="if you know.."/>
+              </view>
+            </view>
+            </view>
+
+               <view class="weui-cells__title">water frequency</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="water_freq_avg" placeholder="watering every how many days ."/>
+              </view>
+            </view>
+            </view>
        
     
 
@@ -21,7 +38,7 @@
           <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
               <view class="weui-cell__bd">
-                <input name="description" class="weui-input" placeholder="About your plant" />
+                <input name="description" class="weui-input" placeholder="About your plant"/>
               </view>
             </view>
 

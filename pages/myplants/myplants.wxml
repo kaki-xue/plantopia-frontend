@@ -21,6 +21,12 @@
       </view>
     </view>
    </view>
+
+   <view class="cards plusaplant plus" bindtap="goToNew">  
+    <view > <text class="fas fa-plus"></text>
+    </view>
+   </view>
+ 
 </view>
 
 

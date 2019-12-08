@@ -9,34 +9,23 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
   data: {
-
+   
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this;
 
   },
 
   // scan-step-1-take a photo
 
 takePhoto: function () {
-  // wx.chooseImage({
-  //   count: 1,
-  //   sizeType: ['original', 'compressed'],
-  //   sourceType: ['album', 'camera'],
-  //   success: function (res) {
-  //     let tempFilePath = res.tempFilePaths[0];
-  //     new AV.File('file-name', {
-  //       blob: {
-  //         uri: tempFilePath,
-  //       },
-  //     }).save().then(
-  //       file => console.log(file.url())
-  //     ).catch(console.error);
-  //   }
-  // });
+
+  let page = this;
+  
   wx.chooseImage({
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
@@ -68,22 +57,48 @@ takePhoto: function () {
             },
             success: function (res) {
               console.log("success", res);
-              // const data = res.data
-              // console.log("plantapi:", data)
-              // page.setData({
-              //   plant_chat_id: plant_chat_id
-              // })
-            },
-            fail: function(err){
-              console.log(err)
+              const scanname=res.data.Result[0].LatinName;
+
+              page.setData({
+                scanname: res.data.Result[0].LatinName,
+                scanimage: res.data.Result[0].ImageUrl
+              });
+             
+             wx.request({
+               url: getApp().globalData.host + `/api/v1/plant_libraries?latin_name=${scanname}`,
+               method: "get",
+               success: function (res) {
+                 console.log("res-----getback", res)
+                 page.setData({
+                   id: res.data.plant_libraries[0].id,
+                 })
+
+               }
+
+             })
+
+
+
             }
           })
+
+          console.log("strangest thing", page.data)
+
         }
       });
     }
   })
 
+
 },
+
+  goToLibrary: function() {
+    let page=this
+    console.log('page data', page.data)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${page.data.id}`
+    })
+  },
 
 // ref https://blog.csdn.net/weixin_41490929/article/details/82890977
 

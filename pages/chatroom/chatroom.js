@@ -13,7 +13,8 @@ Page({
   user_msg_delay: "Hold on there, I'll water you later",
   plant_msg_hi:"Hey ya :)",
   plant_msg_watered: 'Thank you! I am happy! :D',
-  plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!"
+  plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!",
+    plant_msg_often: "Coucou.....Time to water your baby .......!" 
 },
 
   // fetch all messages
@@ -79,26 +80,58 @@ Page({
     usermsg.is_user = true
     usermsg.text = page.data.user_msg_watered
     usermsg.plant_chat_id = plant_chat_id
-   console.log("msg",usermsg)
-    wx.request({
-      url:getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
-      method: 'post',
-      data: usermsg,
-      success: function (res) {
-        console.log("success", res);
-        const usermsg_id = res.data.id
-        page.setData({
-          usermsg_id: usermsg_id
-        })
-        console.log("usermsg",usermsg_id)
-        page.fetchMessages()
-
-      }
-    })
+  //  console.log("msg",usermsg)
    
-
-  //  get plant thank you msg
+    var msgsArray = page.data.allmsg;
+    var lastMsg = msgsArray[msgsArray.length - 1];
+   console.log('lastMsg', lastMsg)
+  //  if the last message is nil 
+    if (lastMsg == undefined) {
+        wx.showModal({
+          title: "Baby isn't thirsty!",
+          content: "You cannot water the baby!",
+          confirmText: "Back",
+          confirmColor: '#ff0f0f',
+          showCancel: false,
+          success(res) {
+            if (res.confirm) {
+              console.log('Hello')
+            } 
+          }
+        })
+  // if the last msg equals make sure to water me later or coocoo 
+    } else if (lastMsg !== page.data.lant_msg_often || lastMsg !== plant_msg_delay) {
+      wx.showModal({
+        title: "Too soon!",
+        content: "Wait until baby is thirsty!",
+        confirmText: "Back",
+        confirmColor: '#ff0f0f',
+        showCancel: false,
+        success(res) {
+          if (res.confirm) {
+            console.log('Hello')
+          }
+        }
+      }) 
+  // if it's OK then execute it
+    } else { 
+        wx.request({
+          url: getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
+          method: 'post',
+          data: usermsg,
+          success: function (res) {
+            console.log("success", res);
+            const usermsg_id = res.data.id
+            page.setData({
+              usermsg_id: usermsg_id
+            })
+            console.log("usermsg", usermsg_id)
+            page.fetchMessages()
+          }
+        })
+      }  
   },
+
 
 
 

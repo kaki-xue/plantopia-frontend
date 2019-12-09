@@ -1,33 +1,34 @@
 <!--pages/scan_result/scan_result.wxml-->
 
-<view class="card-center">
-  <view class="plant-card">
+<view wx:if="{{scanimage==''}}" class="cover-image">
+    <view  class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(https://images.pexels.com/photos/1781934/pexels-photo-1781934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+    <view class="cover-info">
+      <view>  Don't know this plant ?</view>
+      <view class="fas fa-arrow-down"></view>
+    </view>
+</view>
+</view>
 
-    <image class="main-img" src="{{scanimage}}"></image>
+  
+
+<view wx:else  class="card-center">
+  <view class="plant-card">
+    <image  class="main-img" src="{{scanimage}}"></image>
     <view class="under-img">
           <view class="plant-name">{{scanname}}</view>
-          <view class="fas fa-pen-square" bindtap="goToLibrary"></view>
+          <view class="fas fa-info-circle" bindtap="goToLibrary"></view>
     </view>
   </view>
 </view>
 
 
-  <view class="form-margin">
-  <!-- <view class="weui-cells__title">Image</view>
-  <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view> -->
-  <view class="weui-cells weui-cells_after-title">
-    <!-- <view class="weui-cell">
-      <view class="weui-cell__bd">
-        <button bindtap="takePhoto">Choose Image</button>
-      </view>
-    </view> -->
 
       <view class="msg-button">
           <button bindtap="takePhoto" class="btn btn-flat">
+          
             <view class="try">
               <view class="fas fa-camera"></view>
             </view>
           </button>    
         </view>
-  </view>
-</view>
+ 

@@ -1,0 +1,30 @@
+
+<!--pages/users/users.wxml-->
+<view class="user-page" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1407305/pexels-photo-1407305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+ <!-- profile pic -->
+  <view class="profile-pic">
+    <!-- <text class="fas fa-heart"></text> -->
+    <image class="avatar-large" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" mode="aspectFill">
+    </image>
+  </view>
+  <view class="user-info">
+    <view class="user-information">
+      <view class="card">
+         <text class="fas fa-tint"></text>
+        <view class="btn btn-plant" href="#">Email reminder</view>
+        
+      </view>
+      <view class="card">
+      
+        <text class="fas fa-heart"></text>
+        <view class="btn btn-plant" href="#">My collection</view>
+      </view>
+      <view class="card">
+          <text class="fas fa-leaf"></text>
+        <view class="btn btn-plant" href="#">My plants</view>
+   
+      </view>
+    </view>
+  
+  </view>
+</view>

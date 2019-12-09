@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/new/new",
     "pages/index/index",
     "pages/show/show",
@@ -37,18 +38,19 @@
           "selectedIconPath": "img/seedling-new.png",
           "text": "My Plants"
         },
+          {
+            "pagePath": "pages/scan_result/scan_result",
+            "iconPath": "img/camera-new.png",
+            "selectedIconPath": "img/camera-new.png",
+            "text": "Scan"
+          },
         {
-          "pagePath": "pages/logs/logs",
+          "pagePath": "pages/user/user",
           "iconPath": "img/user-new.png",
           "selectedIconPath": "img/user-new.png",
           "text": "User"
-        },
-        {
-          "pagePath": "pages/scan_result/scan_result",
-          "iconPath": "img/camera-new.png",
-          "selectedIconPath": "img/camera-new.png",
-          "text": "Scan"
         }
+     
       ]
     },
   "style": "v2",

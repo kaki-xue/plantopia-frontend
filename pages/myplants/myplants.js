@@ -26,6 +26,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     const user_id = getApp().globalData.userId
+   
 
     wx.request({
       url: getApp().globalData.host + `/api/v1/users/${user_id}`,
@@ -58,6 +59,7 @@ Page({
   onShow: function () {
     let page = this;
     const user_id = getApp().globalData.userId
+   
 
     wx.request({
       url: getApp().globalData.host + `/api/v1/users/${user_id}`,

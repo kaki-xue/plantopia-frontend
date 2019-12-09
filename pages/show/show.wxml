@@ -1,29 +1,129 @@
 <!--pages/show/show.wxml-->
-<view class="plant-card">
-  <view class="card-trip">
-    <image
-  src="{{image}}"></image>
-    <view class="card-trip-infos">
-      <view>
-        <view class="h2">{{name}}</view>
-        <view class="p">Water me every {{water_freq_avg}} days</view>
-        <view>{{description}}</view>
-      </view>
-      <view class="button-area">
-          <!-- <button class="weui-btn mini-btn" type="primary" size="mini">add</button> -->
-          <!-- <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToFav" data-id="{{id}}">like</button> -->
-          <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button>
-      </view>
+<view class="whole">
+  <view class="plant-card">
+    <view class="card-trip">
+      <image
+    src="{{image}}"></image>
+            <!-- <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToFav" data-id="{{id}}">like</button>
+              <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button> -->
+      <view class="under-image">
+        <view class="h2">{{latin_name}}</view>
+         <view class="two-btn">
+          <view class="little-btn" bindtap="goToFav" data-id="{{id}}"> <text class="fas fa-heart up"></text></view>
+          <view class="little-btn" bindtap="goToAdd" data-id="{{id}}"><text class="fas fa-plus up"></text></view>
+         </view>
+       </view>
+    </view>
+  
 
-      <view class="button-sp-area">
+<view class="all-info card-trip">
+
+  <view class="care-bit">
+    <view class="little-header">
+        <view class="fas fa-leaf down"></view>
+        <view class="p">Watering</view>
+    </view>
+    <view class="s-text">Please water me every {{water_freq_avg}} days</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header"> 
+        <view class="fas fa-home down"></view>
+        <view class="p">family</view>
+     </view>
+    <view class="s-text">{{family}}</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-ruler-vertical down"></view>
+        <view class="p">height</view>
+     </view>
+    <view class="s-text">{{average_height}}</view>
+
+  </view>
+
+   <view class="care-bit">
+    <view class="little-header">
+        <view class="fas fa-sun down"></view>
+        <view class="p">light</view>
+      </view>
+      <view class="s-text">{{light_preference}}</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-box-open down"></view>
+        <view class="p">soil</view>
+     </view>
+     <view class="s-text">{{soil}}</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-stethoscope down"></view>
+        <view class="p">temperature</view>
+     </view>
+     <view class="s-text">{{temperature}}</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-smile-wink down"></view>
+        <view class="p">flowering</view>
+      </view>
+      <view class="s-text">{{flowering}}</view>
+  </view>
+
+     <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-smile-wink down"></view>
+        <view class="p">watering</view>
+      </view>
+      <view class="s-text">{{watering}}</view>
+  </view>
+
+  <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-smile-wink down"></view>
+        <view class="p">fertilizer</view>
+      </view>
+      <view class="s-text">{{fertilizer}}</view>
+  </view>
+
+   <view class="care-bit">
+     <view class="little-header">
+        <view class="fas fa-smile-wink down"></view>
+        <view class="p">Care</view>
+      </view>
+      <view class="s-text">{{careinfo}}</view>
+  </view>
+
+
+</view>
+
+
+
+
+ 
+     
+        <!-- <view class="h2">{{name}}</view> -->
+        <!-- <view class="p">Water me every {{water_freq_avg}} days</view> -->
+        <!-- <view>{{description}}</view> -->
+   
+      <!-- <view class="button-area">
+    
+      </view> -->
+
             <!-- <button class="weui-btn mini-btn" type="primary" size="mini">add</button> -->
-            <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToFav" data-id="{{id}}">like</button>
-            <button class="weui-btn mini-btn" type="default" size="mini" bindtap="goToAdd" data-id="{{id}}">add</button>
+    
+      <!-- <view class="button-sp-area">
  
            
      
-        </view>
+        </view> -->
 
-    </view> 
+ 
   </view>
+
 </view>

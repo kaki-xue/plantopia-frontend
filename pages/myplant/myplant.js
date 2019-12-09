@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
+    console.log("options", options)
     const user_id = getApp().globalData.userId
 
     wx.request({

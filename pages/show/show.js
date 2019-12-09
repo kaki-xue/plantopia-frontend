@@ -25,6 +25,8 @@ Page({
         page.setData(
           plant
         );
+
+        console.log("plant",plant)
         wx.hideToast();
       }
     });
@@ -43,7 +45,7 @@ Page({
     console.log("plant_lib", plant_library_id)
     console.log("user_id", user_id)
     wx.request({
-      url: `http://localhost:3000/users/${user_id}/plant_libraries/${plant_library_id}`,
+      url: getApp().globalData.host +`/api/v1/users/${user_id}/plant_libraries/${plant_library_id}`,
       method: 'POST',
       success(res) {
         console.log("result", res.data.favorite)

@@ -3,23 +3,6 @@
 const app = getApp()
 const AV = require('../../utils/av-weapp-min.js');
 
-const date = new Date()
-const years = []
-const months = []
-const days = []
-
-for (let i = 1990; i <= date.getFullYear(); i++) {
-  years.push(i)
-}
-
-
-for (let i = 1; i <= 12; i++) {
-  months.push(i)
-}
-
-for (let i = 1; i <= 31; i++) {
-  days.push(i)
-}
 
 Page({
 
@@ -27,16 +10,22 @@ Page({
    * Page initial data
    */
   data: {
-    years: years,
-    year: date.getFullYear(),
-    months: months,
-    month: 2,
-    days: days,
-    day: 2,
-    value: [9999, 11, 11],
-    startDate: 'Press here',
-    timeData: 'Press here'
+  
+        checkedEmail: false,
+
   },
+
+  toggleEmailReminder: function(e) {
+    let page = this 
+    let remindervalue=e.detail.value
+    console.log(remindervalue)
+   page.setData({
+     remindervalue:remindervalue
+   });
+  
+  },
+
+
 
   takePhoto: function () {
     let page = this
@@ -103,6 +92,7 @@ Page({
    */
   onShow: function (options) {
     console.log('options on show', options)
+
   },
 
   /**
@@ -170,6 +160,8 @@ Page({
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id
     plant.image = page.data.imageUrl
+    plant.reminder = page.data.remindervalue
+    console.log("reminderornot", page.data.remindervalue)
   
 
   

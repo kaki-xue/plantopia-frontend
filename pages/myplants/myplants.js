@@ -7,7 +7,11 @@ Page({
   data: {
 
   },
-
+  goToNew: function () {
+    wx.navigateTo({
+      url: '/pages/new/new',
+    })
+  },
   goToChatroom: function (e) {
     const plantId = e.currentTarget.dataset.id
     wx.navigateTo({

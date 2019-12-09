@@ -1,4 +1,8 @@
 /* pages/user/user.wxss */
+text {
+  color:black;
+
+}
 .user-page {
   height:100vh;
   width:100vw;
@@ -15,10 +19,11 @@
   bottom: 50px;
 }
 .fas {
-  font-size: 32px;
-  color:#1CE2A7;
+  font-size: 18px;
+  color:black;
   /* color:rgb(100,100,100); */
   margin-right: 20px;
+  opacity:0.5;
 }
 .avatar-large {
   vertical-align: middle;
@@ -31,13 +36,15 @@
 .btn-plant {
   color: white;
   padding: 8px 24px;
-  background: #1CE2A7;
+  /* background: #1CE2A7; */
+  background:white;
    /* background:rgb(100,100,100); */
+  opacity:0.7;
   transition: background 0.3s ease;
   margin: 15px;
   border-radius: 10px;
-  width: 50%;
-  display:inline-block;
+  width: 60%;
+  /* display:inline-block; */
 }
 .card{
   display:flex;

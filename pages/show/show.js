@@ -42,18 +42,13 @@ Page({
     let page = this;
     let user_id = app.globalData.userId
     let plant_library_id = event.currentTarget.dataset.id
-    console.log("plant_lib", plant_library_id)
-    console.log("user_id", user_id)
     wx.request({
       url: getApp().globalData.host +`/users/${user_id}/plant_libraries/${plant_library_id}`,
       method: 'POST',
       success(res) {
-        const favorite = res.data.favorite;
-        app.globalData.favorite = res.data.favorite;
-        console.log("result", res.data)
-        console.log("global?",app.globalData.favorite)
+    
         wx.navigateTo({
-          url: '/pages/mycollection/mycollection'
+          url: `/pages/mycollection/mycollection?id=${plant_library_id}`
         })
       }
     })

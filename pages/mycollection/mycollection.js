@@ -15,17 +15,23 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-
-    let fav = app.globalData
-
-    page.setData({
-      favorite: app.globalData.favorite
-    });
-    console.log("thispage",fav);
-    const user_id = getApp().globalData.userId
-    console.log("gloabl",user_id)
-
+    let user_id = app.globalData.userId
+    let plant_library_id = options.id
+    console.log("userId",user_id)
+    console.log("plant_lib", plant_library_id)
+    wx.request({
+      url: getApp().globalData.host + `/users/${user_id}/plant_libraries/${plant_library_id}`,
+      method: 'GET',
+      success(res) {
+        page.setData({
+        favorite: res.data.favorite
+      })
+      }
+    })
   },
+
+
+  
 
 myfav:function(event) {
   const query = event.target.dataset.id
@@ -41,6 +47,31 @@ myfav:function(event) {
   })
 },
 
+goTodelete:function(event) {
+  let page = this
+  const id = event.target.dataset.id
+  console.log("delete",id)
+  const userId = app.globalData.userId
+  console.log("userId",userId)
+  wx.request({
+    url: getApp().globalData.host + `/users/${userId}/favorites/${id}`,
+    method: 'DELETE',
+    success(res) {
+      console.log("resulteee",res)
+      wx.request({
+        url: getApp().globalData.host + `/users/${userId}/plant_libraries/${id}`,
+        method: 'GET',
+        success(res) {
+          page.setData({
+            favorite: res.data.favorite
+          })
+        }
+      })
+ 
+    }
+  })
+
+},
   /**
    * Lifecycle function--Called when page is initially rendered
    */

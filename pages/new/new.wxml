@@ -1,11 +1,42 @@
 <!--pages/new/new.wxml-->
 <!-- form to add plant_library_id to my plant -->
- <view class="weui-cells__title">New Member</view>
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})">
-  </view>
-    <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
-      <form bindsubmit="formSubmit" class="weui-form">
+ 
 
+
+   <form bindsubmit="formSubmit" class="form-container">
+      <view class="desc">Nickname</view>
+                <input class="entry" name="nickname" placeholder="Your plant deserve a name of her own.."/>
+           
+
+            <view class="desc">Latin name</view>
+                <input class="entry" name="name" placeholder="if you know.."/>
+            
+
+               <view class="desc">Water frequency</view>
+                <input class="entry" name="water_freq_avg" placeholder="watering every how many days ."/>
+           
+    
+
+        <view class="desc">Description</view>
+                <input class="entry" name="description" placeholder="About your plant"/>
+          
+        <view class="tom">
+          <view class="">Image</view>
+           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>
+           <view class="">
+             <view class=""> 
+              <view class="">
+                <button bindtap="takePhoto">Choose Image</button>
+              </view>
+             </view>
+           </view>   
+        </view>
+        <view class="">
+            <button class="" type="primary" form-type="submit">Submit</button>
+        </view>
+    </form>
+    <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
+      <!-- <form bindsubmit="formSubmit" class="weui-form">
       <view class="weui-cells__title">Nickname</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell ">
@@ -58,5 +89,5 @@
         <view class="weui-btn-area">
             <button class="weui-btn" type="primary" form-type="submit">Submit</button>
         </view>
-    </form>
+    </form> -->
    

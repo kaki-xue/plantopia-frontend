@@ -1,64 +1,95 @@
 /* pages/myplants/myplants.wxss */
+
+.myplants-page {
+  height:100vh;
+  width:100vw;
+}
+.plant-name {
+  font-size:16px;
+}
+.header-flex {
+  display:flex;
+  justify-content: center;
+}
 .fa-baby-carriage {
-  color:#1CE2A7;
-  font-size:24px;
-  margin-left:20px;
+  color:white;
+  /* color:#1CE2A7; */
+  font-size:40px;
+  opacity:0.9;
+
 }
 .plusaplant {
   display:flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+
 }
 .plus {
   height:200px;
 }
 .header {
-  height:60px;
-  border-bottom: 1px dotted rgb(200,200,200);
+  background-size: cover;
+  background-position: center;
+  height:100px;
+  /* border-bottom: 1px dotted rgb(200,200,200); */
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight:medium;
-  background-color: white;
+  width:80%;
+
   
 }
 .header-bar {
-  color:black;
+   /* color:#1CE2A7; */
+  color:white;
+  font-size:14px;
+  font-family:raleway;
+  margin:8px;
 }
 .container {
-  height:100vh;
+  height:80vh;
   width:100%;
   justify-content: space-evenly;
   display:grid;
   grid-template-columns: 40vw 40vw;
   grid-gap: 8px;
   background-color: white;
-  padding-top:15px;
+  padding:0 10px;
+ 
 }
 .cards {
   background-size: cover;
   box-shadow: 0 0 10px rgb(0,0,0,0.1);
   border-radius:8px;
-  font-weight: bold;
-
-
+  font-weight: medium;
+  color:rgb(100,100,100);
 }
 
 .cards image {
   max-width: 40vw;
-  max-height: 40vw;
+  max-height: 35vw;
   border-top-left-radius:8px;
   border-top-right-radius:8px;
 }
 
 .card-trip-infos{
- display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   height:100%;
+  padding:0px;
 }
 
-.card-trip-infos view {
-
+.fa-comments-alt {
+  color:black;
+}
+.icons {
+  display:flex;
+  justify-content: space-evenly;
+  margin:8px;
+  width:100%;
 }

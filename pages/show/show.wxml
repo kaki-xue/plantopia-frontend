@@ -21,7 +21,7 @@
   <view class="care-bit">
     <view class="little-header">
         <view class="fas fa-leaf down"></view>
-        <view class="p">Watering</view>
+        <!-- <view class="p">Watering</view> -->
     </view>
     <view class="s-text">Please water me every {{water_freq_avg}} days</view>
   </view>
@@ -29,7 +29,7 @@
    <view class="care-bit">
      <view class="little-header"> 
         <view class="fas fa-home down"></view>
-        <view class="p">family</view>
+        <!-- <view class="p">family</view> -->
      </view>
     <view class="s-text">{{family}}</view>
   </view>
@@ -37,7 +37,7 @@
    <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-ruler-vertical down"></view>
-        <view class="p">height</view>
+        <!-- <view class="p">height</view> -->
      </view>
     <view class="s-text">{{average_height}}</view>
 
@@ -46,7 +46,7 @@
    <view class="care-bit">
     <view class="little-header">
         <view class="fas fa-sun down"></view>
-        <view class="p">light</view>
+        <!-- <view class="p">light</view> -->
       </view>
       <view class="s-text">{{light_preference}}</view>
   </view>
@@ -54,7 +54,7 @@
    <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-box-open down"></view>
-        <view class="p">soil</view>
+        <!-- <view class="p">soil</view> -->
      </view>
      <view class="s-text">{{soil}}</view>
   </view>
@@ -62,7 +62,7 @@
    <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-stethoscope down"></view>
-        <view class="p">temperature</view>
+        <!-- <view class="p">temperature</view> -->
      </view>
      <view class="s-text">{{temperature}}</view>
   </view>
@@ -70,7 +70,7 @@
    <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-smile-wink down"></view>
-        <view class="p">flowering</view>
+        <!-- <view class="p">flowering</view> -->
       </view>
       <view class="s-text">{{flowering}}</view>
   </view>
@@ -78,7 +78,7 @@
      <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-smile-wink down"></view>
-        <view class="p">watering</view>
+        <!-- <view class="p">watering</view> -->
       </view>
       <view class="s-text">{{watering}}</view>
   </view>
@@ -86,7 +86,7 @@
   <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-smile-wink down"></view>
-        <view class="p">fertilizer</view>
+        <!-- <view class="p">fertilizer</view> -->
       </view>
       <view class="s-text">{{fertilizer}}</view>
   </view>
@@ -94,7 +94,7 @@
    <view class="care-bit">
      <view class="little-header">
         <view class="fas fa-smile-wink down"></view>
-        <view class="p">Care</view>
+        <!-- <view class="p">Care</view> -->
       </view>
       <view class="s-text">{{careinfo}}</view>
   </view>

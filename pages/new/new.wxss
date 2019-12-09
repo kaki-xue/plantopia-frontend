@@ -1,5 +1,26 @@
 /* pages/new/new.wxss */
-.weui-cells__title {
-  font-size: 20px;
-  font-weight: bold;
+
+.form-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.entry {
+  padding: 16px 16px;
+  background: white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border:1px dotted;
+  border-color:rgb(100,100,100);
+  margin: 8px;
+  width: 300px;
+  margin-bottom: 20px;
+
+}
+
+.desc {
+  text-shadow: 1px;
+}
+

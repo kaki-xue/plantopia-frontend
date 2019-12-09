@@ -1,7 +1,14 @@
 
+<view class="header-flex" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/1073074/pexels-photo-1073074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
 <view class="header">
-  <view class="header-bar">My Plant Babies </view><view class="fas fa-baby-carriage"></view>
+    <view class="fas fa-baby-carriage"></view>
+    <view class="header-bar">My Plant Babies </view>
+  </view>
 </view>
+
+<!-- <view class="header-flex">
+  
+</view> -->
 
 <view class="container">
 
@@ -11,13 +18,15 @@
   
     <view class="card-trip-infos">
       <view>
-        <view>{{plant.nickname}}</view>
+        <view class="plant-name">{{plant.nickname}}</view>
       </view>
       <!-- <view>
         <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
       </view> -->
-      <view>
+      <view class="icons">
+      <!-- <view class="fas fa-heart-broken"></view> -->
         <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-heart-broken"></view>
+        <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-comments"></view>
       </view>
     </view>
    </view>
@@ -28,6 +37,8 @@
    </view>
  
 </view>
+
+
 
 
 

@@ -3,30 +3,28 @@
   <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})">
     <view class="centre-text">{{plant.latin_name}}</view>
   </view>
-    <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
-      <form bindsubmit="formSubmit" class="weui-form">
 
-      <view class="weui-cells__title">Nickname</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell ">
-              <view class="weui-cell__bd">
-                <input class="weui-input" name="nickname" placeholder="Input a nickname"/>
-              </view>
-            </view>
-           <view class="weui-cells__title"></view>
-       
+      <form bindsubmit="formSubmit" class="form-container">
+
+      <view class="desc">Nickname</view>
+      <input class="entry"  name="nickname" placeholder="She deserves a name of her own"/>
     
 
-        <view class="weui-cells__title">Description</view>
-          <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell ">
-              <view class="weui-cell__bd">
-                <input name="description" class="weui-input" placeholder="About your plant" />
-              </view>
-            </view>
+      <view class="desc">Description</view>
+      <input name="description" class="entry" placeholder="About your plant" />
+          <view class="desc">Water Frequency</view>
+      <input name="water_frequency" class="entry" placeholder="Every {{plant.water_freq_avg}} days" />
 
-          </view>
+    
+        <view class="entry">
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">Email Reminder</view>
+                <view class="weui-cell__ft">
+                    <switch checked="{{checkedEmail}}" bindchange="toggleEmailReminder"/>
+                </view>
+            </view>
         </view>
+       
         <view class="form-margin">
           <view class="weui-cells__title">Image</view>
            <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>

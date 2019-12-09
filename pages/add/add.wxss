@@ -1,3 +1,28 @@
+.entry {
+  padding: 16px 16px;
+  background: white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border:1px dotted;
+  border-color:rgb(100,100,100);
+  margin: 8px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  margin:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc {
+  text-shadow: 1px;
+}
+
+
 .card-category {
   background-size: cover;
   background-position: center;

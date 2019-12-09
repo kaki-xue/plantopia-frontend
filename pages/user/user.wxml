@@ -17,7 +17,7 @@
       <view class="card">
       
         <text class="fas fa-heart"></text>
-        <view class="btn btn-plant" href="#">My collection</view>
+        <view class="btn btn-plant" bindtap="goTocollection" href="#">My collection</view>
       </view>
       <view class="card">
           <text class="fas fa-leaf"></text>

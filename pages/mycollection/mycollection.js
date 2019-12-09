@@ -34,6 +34,9 @@ myfav:function(event) {
     method: "get",
     success: function (res) {
       console.log("res", res)
+      wx.navigateTo({
+        url: `/pages/show/show?id=${query}`
+      })
     }
   })
 },

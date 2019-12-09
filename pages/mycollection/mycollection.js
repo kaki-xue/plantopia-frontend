@@ -20,7 +20,7 @@ Page({
     console.log("userId",user_id)
     console.log("plant_lib", plant_library_id)
     wx.request({
-      url: getApp().globalData.host + `/users/${user_id}/plant_libraries/${plant_library_id}`,
+      url: getApp().globalData.host + `/users/${user_id}/plant_libraries`,
       method: 'GET',
       success(res) {
         page.setData({
@@ -59,7 +59,7 @@ goTodelete:function(event) {
     success(res) {
       console.log("resulteee",res)
       wx.request({
-        url: getApp().globalData.host + `/users/${userId}/plant_libraries/${id}`,
+        url: getApp().globalData.host + `/users/${userId}/plant_libraries`,
         method: 'GET',
         success(res) {
           page.setData({

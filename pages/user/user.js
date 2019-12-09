@@ -8,6 +8,11 @@ Page({
 
   },
 
+  goTocollection:function(){
+    wx.navigateTo({
+      url: '/pages/mycollection/mycollection',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

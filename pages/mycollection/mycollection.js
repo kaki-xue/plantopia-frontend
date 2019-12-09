@@ -16,10 +16,18 @@ Page({
   onLoad: function (options) {
     let page = this;
 
+    let fav = app.globalData
+    // page.setData({
+    //   favorite: app.globalData.favorite
+    // });
+
+
     this.setData({
       favorite: app.globalData.favorite
     });
 
+
+    console.log("thispage",fav);
     // const user_id = getApp().globalData.userId
     // console.log("gloabl",user_id)
 

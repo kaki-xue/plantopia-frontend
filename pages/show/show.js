@@ -51,11 +51,14 @@ Page({
         console.log("result", res.data.favorite)
         const favorite = res.data.favorite;
         app.globalData.favorite = favorite;
+        console.log("global?",app.globalData.favorite)
       }
     })
     wx.navigateTo({
       url: '/pages/mycollection/mycollection'
     })
+
+  
   },
   /**
    * Lifecycle function--Called when page is initially rendered

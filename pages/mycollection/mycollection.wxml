@@ -4,9 +4,10 @@
 </view>
 
 <view wx:for="{{favorite}}" wx:for-item="fav" class="fav-card"> 
-  <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{fav.image}})">
+  <view class="card-category" data-id="{{fav.id}}" bindtap="myfav"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{fav.image}})">
  {{fav.name}}
   </view>
+  <view data-id="{{fav.id}}" bindtap="goTodelete" style="color:black" class="far fa-trash-alt"></view>
 </view>
 
 

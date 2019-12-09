@@ -15,40 +15,63 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-
-    let fav = app.globalData
-    // page.setData({
-    //   favorite: app.globalData.favorite
-    // });
-
-
-    this.setData({
-      favorite: app.globalData.favorite
-    });
-
-
-    console.log("thispage",fav);
-    // const user_id = getApp().globalData.userId
-    // console.log("gloabl",user_id)
-
-
-    const user_id = getApp().globalData.userId
-    console.log("gloabl",user_id)
-
-    // wx.request({
-    //   url: getApp().globalData.host + `/api/v1/users/${user_id}/plant_libraries`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const mylikes = res.data.plant_libraries;
-    //     console.log('mylikes', mylikes)
-    //     page.setData({
-    //       mylikes
-    //     })
-    //   }
-    // })
-
+    let user_id = app.globalData.userId
+    let plant_library_id = options.id
+    console.log("userId",user_id)
+    console.log("plant_lib", plant_library_id)
+    wx.request({
+      url: getApp().globalData.host + `/users/${user_id}/plant_libraries`,
+      method: 'GET',
+      success(res) {
+        page.setData({
+        favorite: res.data.favorite
+      })
+      }
+    })
   },
 
+
+  
+
+myfav:function(event) {
+  const query = event.target.dataset.id
+  wx.request({
+    url: getApp().globalData.host + `/api/v1/plant_libraries?query=${query}`,
+    method: "get",
+    success: function (res) {
+      console.log("res", res)
+      wx.navigateTo({
+        url: `/pages/show/show?id=${query}`
+      })
+    }
+  })
+},
+
+goTodelete:function(event) {
+  let page = this
+  const id = event.target.dataset.id
+  console.log("delete",id)
+  const userId = app.globalData.userId
+  console.log("userId",userId)
+  wx.request({
+    url: getApp().globalData.host + `/users/${userId}/favorites/${id}`,
+    method: 'DELETE',
+    success(res) {
+      console.log("resulteee",res)
+      wx.request({
+        url: getApp().globalData.host + `/users/${userId}/plant_libraries`,
+        method: 'GET',
+        success(res) {
+          page.setData({
+            favorite: res.data.favorite
+          })
+        }
+      })
+ 
+    }
+  })
+
+},
   /**
    * Lifecycle function--Called when page is initially rendered
    */

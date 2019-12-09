@@ -32,6 +32,7 @@ block wx:for -->
         <view wx:if="{{msg.text===plant_msg_watered}}" class="btn-plant"> {{msg.text}} </view> 
 
         <view wx:if="{{msg.text===plant_msg_delay}}" class="btn-plant"> {{msg.text}} </view> 
+        <view wx:if="{{msg.text===plant_msg_often}}" class="btn-plant"> {{msg.text}} </view> 
         
       </view>
 

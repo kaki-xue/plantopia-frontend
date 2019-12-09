@@ -17,12 +17,9 @@ Page({
     let page = this;
 
     let fav = app.globalData
-    // page.setData({
-    //   favorite: app.globalData.favorite
-    // });
 
 
-    this.setData({
+    page.setData({
       favorite: app.globalData.favorite
     });
 

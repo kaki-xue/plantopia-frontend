@@ -45,18 +45,19 @@ Page({
     console.log("plant_lib", plant_library_id)
     console.log("user_id", user_id)
     wx.request({
-      url: getApp().globalData.host +`/api/v1/users/${user_id}/plant_libraries/${plant_library_id}`,
+      url: getApp().globalData.host +`/users/${user_id}/plant_libraries/${plant_library_id}`,
       method: 'POST',
       success(res) {
-        console.log("result", res.data.favorite)
         const favorite = res.data.favorite;
-        app.globalData.favorite = favorite;
+        app.globalData.favorite = res.data.favorite;
+        console.log("result", res.data)
         console.log("global?",app.globalData.favorite)
+        wx.navigateTo({
+          url: '/pages/mycollection/mycollection'
+        })
       }
     })
-    wx.navigateTo({
-      url: '/pages/mycollection/mycollection'
-    })
+   
 
   
   },

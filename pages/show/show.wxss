@@ -105,6 +105,9 @@ image {
   font-weight: bold;
   margin-left: 10px;
   color:rgb(80,80,80);
+  width:50%;
+  word-wrap: break-word;
+
 }
 
 .card-trip .p {

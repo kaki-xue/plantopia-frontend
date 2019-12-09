@@ -123,6 +123,13 @@
 					"pathName": "pages/scan_result/scan_result",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

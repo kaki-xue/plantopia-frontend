@@ -1,4 +1,6 @@
 // pages/show/show.js
+// import { formatTime } from '../../utils/util.js'
+
 let app = getApp()
 Page({
 

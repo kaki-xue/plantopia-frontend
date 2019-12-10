@@ -56,7 +56,7 @@
   grid-template-columns: 40vw 40vw;
   grid-gap: 8px;
   background-color: white;
-  padding:0 10px;
+  padding:10px;
  
 }
 .cards {

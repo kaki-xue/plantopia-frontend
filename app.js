@@ -15,6 +15,10 @@ App({
     const host = this.globalData.host
     const app = this;
     console.log('beginning login')
+    wx.showLoading({
+      title: 'Loading',
+    })
+    wx.hideTabBar({})
     wx.login({
       success: (res) => {
         console.log(res)
@@ -29,6 +33,11 @@ App({
           success: (res) => {
             console.log('res', res)
             app.globalData.userId = res.data.userId
+            setTimeout(function() {
+              wx.hideLoading()
+              wx.showTabBar({})
+            }, 2000)
+            
           }
         })
 

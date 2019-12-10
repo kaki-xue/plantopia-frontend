@@ -22,8 +22,9 @@ Page({
       success(res) {
         
         const plant = res.data;
+        console.log("planttt", plant)
         page.setData({
-          plant: plant
+          plant
         });
         wx.hideToast();
       }

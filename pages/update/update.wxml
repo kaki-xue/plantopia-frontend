@@ -1,7 +1,7 @@
 <!-- form to add plant_library_id to my plant -->
  <view class="weui-cells__title">Edit Your Plant</view>
   <view class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})">
-    <view class="centre-text">{{plant.name}}</view>
+    <view class="centre-text">{{plant.latin_name}}</view>
   </view>
     <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->
       <form bindsubmit="formSubmit" class="weui-form">

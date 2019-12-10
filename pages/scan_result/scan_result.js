@@ -70,9 +70,19 @@ takePhoto: function () {
                method: "get",
                success: function (res) {
                  console.log("res-----getback", res)
-                 page.setData({
-                   id: res.data.plant_libraries[0].id,
-                 })
+                 if (!res.data.plant_libraries.length){
+                   console.log("")
+                   page.setData({
+                     nopic:true
+                   })
+                 } else {
+                   
+                   page.setData({
+                     nopic:false,
+                     id: res.data.plant_libraries[0].id,
+                   })
+                 }
+                 
 
                }
 

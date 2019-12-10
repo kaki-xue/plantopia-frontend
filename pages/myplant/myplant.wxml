@@ -14,7 +14,7 @@
       <text  class="fas fa-leaf"></text>
       <view class="card-product-infos">
         <view class="h2">Name</view>
-        <view class="p">{{plant.latin_name}} </view>
+        <view class="p">{{plant.plant_library.latin_name}} </view>
       </view>
     </view>
 
@@ -30,7 +30,7 @@
       <text class="fas fa-address-card"></text>    
       <view class="card-product-infos">
         <view class="h2">Description</view>
-        <view class="p"> {{plant.description}}</view>
+        <view class="p"> {{plant.plant_library.description}}</view>
       </view>
     </view>
 
@@ -38,7 +38,7 @@
       <view bindtap="removePlant" class="fas fa-trash-alt"></view>
       <view bindtap="updatePlant" class="fas fa-pen-square"></view>
     </view>
-      <button bindtap="goToPlantLibrary">Careinfo</button>
+      <!-- <button bindtap="goToPlantLibrary">Careinfo</button> -->
   </view>
 
 

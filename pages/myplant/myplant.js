@@ -30,6 +30,12 @@ Page({
     });
   },
 
+  goToPlantLibrary: function () {
+      wx.navigateTo({
+        url: '/pages/show/show/?id=${id}',
+      })
+  },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */

@@ -58,7 +58,7 @@ Page({
         console.log("success", res);
         const plant_chat_id = res.data.id
         page.setData({
-          plant_chat_id: plant_chat_id
+          plant_chat_id
         })
         page.fetchMessages()
       }

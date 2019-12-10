@@ -155,7 +155,7 @@ Page({
     plant.description = event.detail.value.description
     const user_id = getApp().globalData.userId
 
-    plant.name = page.data.plant.name
+    plant.latin_name = page.data.plant.latin_name
     plant.water_frequency = page.data.plant.water_freq_avg
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id

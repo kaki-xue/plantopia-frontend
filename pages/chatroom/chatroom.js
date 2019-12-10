@@ -79,7 +79,12 @@ Page({
    
     const msgsArray = page.data.allmsg;
     const lastMsg = msgsArray[msgsArray.length - 1];
-   console.log('lastMsg', lastMsg)
+
+    const plantThirsty = page.data.plant_msg_often
+    const userDelay = page.data.plant_msg_delay
+    const dearLeader = page.data.plant_msg_delay
+
+    console.log('lastMsg', lastMsg)
   //  if the last message is nil 
     if (lastMsg == undefined) {
         wx.showModal({
@@ -90,12 +95,12 @@ Page({
           showCancel: false,
           success(res) {
             if (res.confirm) {
-              console.log('Hello')
+              console.log("Hello isn't thirsty")
             } 
           }
         })
-  // if the last msg equals make sure to water me later or coocoo 
-    } else if (lastMsg !== page.data.plant_msg_often || lastMsg !== plant_msg_delay) {
+  // if the last msg doesn't equal make sure to water me later or coocoo 
+    } else if (lastMsg.text !== plantThirsty && lastMsg.text !== userDelay ) {
       wx.showModal({
         title: "Too soon!",
         content: "Wait until baby is thirsty!",
@@ -104,12 +109,12 @@ Page({
         showCancel: false,
         success(res) {
           if (res.confirm) {
-            console.log('Hello')
+            console.log("Hello thirsty baby")
           }
         }
       }) 
   // if it's OK then send post request and create new message
-    } else { 
+    } else if (lastMsg.text == plantThirsty || lastMsg.text == dearLeader ) { 
         wx.request({
           url: getApp().globalData.host + `/api/v1/plant_chats/${plant_chat_id}/messages`,
           method: 'post',
@@ -136,12 +141,17 @@ Page({
     usermsg.plant_chat_id = plant_chat_id
     console.log("msg", usermsg)
 
+    const plantThirsty = page.data.plant_msg_often
+    const userDelay = page.data.plant_msg_delay
+
     const msgsArray = page.data.allmsg;
     const lastMsg = msgsArray[msgsArray.length - 1];
+    console.log('last message', lastMsg)
+    console.log('last msg', plantThirsty)
     const lastLastLastMsg = msgsArray[msgsArray.length -3];
 
     // if there is no msg or the last message was not a coo coo
-    if (lastMsg == undefined || lastMsg !== page.data.plant_msg_often) {
+    if (lastMsg == undefined || lastMsg.text !== plantThirsty) {
       wx.showModal({
         title: "Wait until baby is thirsty!",
         content: "You don't need to delay now",
@@ -150,12 +160,12 @@ Page({
         showCancel: false,
         success(res) {
           if (res.confirm) {
-            console.log('Hello')
+            console.log('Hello baby needs to be thirsty')
           }
         }
       })
     // if the message before the last message, before the last message was a delay message (i.e user:delayed, plant: OK dear leader etc., plant: I'm thirsty)
-    } else if (lastLastLastMsg === plant_msg_delay) {
+    } else if (lastLastLastMsg == undefined && msgsArray.length > 1 && lastMsg.text == plantThirsty) {
       wx.showModal({
         title: "Don't keep pushing this off!",
         content: "Feed the baby!",
@@ -164,7 +174,7 @@ Page({
         showCancel: false,
         success(res) {
           if (res.confirm) {
-            console.log('Hello')
+            console.log("Hello don't push it off!")
           }
         }
       })

@@ -210,28 +210,28 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    const app = getApp()
-    let page = this
+    // const app = getApp()
+    // let page = this
 
-    let plant_chat = {}
-    let plant_id = options.plant_id
-    let user_id = app.globalData.userId
+    // let plant_chat = {}
+    // let plant_id = options.plant_id
+    // let user_id = app.globalData.userId
     
-    plant_chat.user_id = user_id
-    plant_chat.plant_id = plant_id
-    wx.request({
-      url: getApp().globalData.host + `/api/v1/plant_chats`,
-      method: 'post',
-      data: plant_chat,
-      success: function (res) {
-        console.log("success", res);
-        const plant_chat_id = res.data.id
-        page.setData({
-          plant_chat_id
-        })
-        page.fetchMessages()
-      }
-    })
+    // plant_chat.user_id = user_id
+    // plant_chat.plant_id = plant_id
+    // wx.request({
+    //   url: getApp().globalData.host + `/api/v1/plant_chats`,
+    //   method: 'post',
+    //   data: plant_chat,
+    //   success: function (res) {
+    //     console.log("success", res);
+    //     const plant_chat_id = res.data.id
+    //     page.setData({
+    //       plant_chat_id
+    //     })
+    //     page.fetchMessages()
+    //   }
+    // })
   },
 
   /**

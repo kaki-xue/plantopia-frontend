@@ -4,7 +4,7 @@
  <!-- profile pic -->
   <view class="profile-pic">
     <!-- <text class="fas fa-heart"></text> -->
-    <image class="avatar-large" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" mode="aspectFill">
+    <image class="avatar-large" src="{{userInfo.avatarUrl}}" mode="aspectFill">
     </image>
   </view>
 
@@ -13,20 +13,25 @@
   <view class="user-info">
     <view class="user-information">
 
-      <view class="card">
+      <!-- <view class="card">
         <view class="btn btn-plant" href="#"><text class="fas fa-tint"></text><text class="texto">Email reminder</text></view>
-      </view>
+      </view> -->
 
 
       
       <view class="card">
-        <view class="btn btn-plant" bindtap="goTocollection" href="#">         <text class="fas fa-heart"></text>
+        <view class="btn btn-plant" bindtap="goTocollection">         <text class="fas fa-heart"></text>
 <text class="texto">My collection</text></view>
 
       </view>
 
       <view class="card">
-        <view class="btn btn-plant" href="#">  <text class="fas fa-leaf"></text><text class="texto">My plants</text>
+        <view class="btn btn-plant" bindtap="goToMyplants">  <text class="fas fa-leaf"></text><text class="texto">My plants</text>
+      </view>
+    </view>
+
+     <view class="card">
+        <view class="btn btn-plant" bindtap="getUserPic">  <text class="fas fa-leaf"></text><text class="texto">Login</text>
       </view>
     </view>
   

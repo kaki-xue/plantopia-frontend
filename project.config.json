@@ -130,6 +130,13 @@
 					"pathName": "pages/user/user",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/fakelogin/fakelogin",
+					"pathName": "pages/fakelogin/fakelogin",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -11,19 +11,19 @@ Page({
    */
   data: {
   
-        checkedEmail: false,
+        // checkedEmail: false,
 
   },
 
-  toggleEmailReminder: function(e) {
-    let page = this 
-    let remindervalue=e.detail.value
-    console.log(remindervalue)
-   page.setData({
-     remindervalue:remindervalue
-   });
+  // toggleEmailReminder: function(e) {
+  //   let page = this 
+  //   let remindervalue=e.detail.value
+  //   console.log(remindervalue)
+  //  page.setData({
+  //    remindervalue:remindervalue
+  //  });
   
-  },
+  // },
 
 
 

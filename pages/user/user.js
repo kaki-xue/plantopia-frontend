@@ -13,9 +13,22 @@ Page({
       url: '/pages/mycollection/mycollection',
     })
   },
+
+  goToMyplants:function(e){
+    console.log("event",e)
+    // let app = getApp()
+    // let id= app.globalData.userInfo.id
+    wx.reLaunch({
+      url: '/pages/myplants/myplants',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
+
+  getUserPic: function () {
+    
+  },
   onLoad: function (options) {
 
   },
@@ -31,14 +44,26 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    let page = this
+    let app = getApp()
+    wx.getUserInfo({
+      success: res => {
+        app.globalData.userInfo = res.userInfo
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+        console.log("userInfo", page.data.userInfo)
+      }
+    })
+    
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
   onHide: function () {
-
+  
   },
 
   /**

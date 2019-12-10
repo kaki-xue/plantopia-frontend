@@ -11,7 +11,6 @@
 
 
     <view class="card">
-      <text  class="fas fa-leaf"></text>
       <view class="card-product-infos">
         <view class="h2">Name</view>
         <view class="p">{{plant.plant_library.latin_name}} </view>
@@ -19,7 +18,6 @@
     </view>
 
     <view class="card">
-      <text class="fas fa-tint"></text>
       <view class="card-product-infos">
         <view class="h2">Water me</view>
         <view class="p">Every {{plant.water_frequency}} days</view>
@@ -27,10 +25,44 @@
     </view>
 
     <view class="card">
-      <text class="fas fa-address-card"></text>    
       <view class="card-product-infos">
         <view class="h2">Description</view>
         <view class="p"> {{plant.plant_library.description}}</view>
+      </view>
+    </view>
+
+     <view class="card">
+      <view class="card-product-infos">
+        <view class="h2">Care</view>
+        <view class="p"> {{plant.plant_library.careinfo}}</view>
+      </view>
+    </view>
+
+     <view class="card">
+      <view class="card-product-infos">
+        <view class="h2">Family</view>
+        <view class="p"> {{plant.plant_library.family}}</view>
+      </view>
+    </view>
+
+     <view class="card">
+      <view class="card-product-infos">
+        <view class="h2">Light</view>
+        <view class="p"> {{plant.plant_library.light_preference}}</view>
+      </view>
+    </view>
+
+       <view class="card">
+      <view class="card-product-infos">
+        <view class="h2">Watering</view>
+        <view class="p"> {{plant.plant_library.watering}}</view>
+      </view>
+    </view>
+
+     <view class="card">
+      <view class="card-product-infos">
+        <view class="h2">Description</view>
+        <view class="p"> {{plant.plant_library.soil}}</view>
       </view>
     </view>
 

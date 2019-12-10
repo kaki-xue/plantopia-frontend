@@ -9,7 +9,7 @@
            
 
             <view class="desc">Latin name</view>
-                <input class="entry" name="latin_name" placeholder="if you know.."/>
+                <input class="entry" name="latin_name" placeholder="Try scan .."/>
             
 
                <view class="desc">Water frequency</view>
@@ -32,7 +32,7 @@
            </view>   
         </view>
         <view class="">
-            <button class="" type="primary" form-type="submit">Submit</button>
+            <button class="green-btn" type="primary" form-type="submit">Submit</button>
         </view>
     </form>
     <!-- <view>Watering Frequency: every {{plant.water_freq_avg}} days</view> -->

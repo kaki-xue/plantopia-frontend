@@ -111,6 +111,14 @@ takePhoto: function () {
     })
   },
 
+  goToNew: function () {
+    let page = this
+    console.log('page data', page.data)
+    wx.navigateTo({
+      url: "/pages/new/new"
+    })
+  },
+
 // ref https://blog.csdn.net/weixin_41490929/article/details/82890977
 
 

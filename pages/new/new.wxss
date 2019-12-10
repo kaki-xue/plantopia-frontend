@@ -20,6 +20,11 @@
 
 }
 
+.green-btm {
+    color:#116848;
+
+}
+
 .desc {
   text-shadow: 1px;
 }

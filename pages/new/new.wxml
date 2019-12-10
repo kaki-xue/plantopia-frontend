@@ -9,11 +9,11 @@
            
 
             <view class="desc">Latin name</view>
-                <input class="entry" name="name" placeholder="if you know.."/>
+                <input class="entry" name="latin_name" placeholder="if you know.."/>
             
 
                <view class="desc">Water frequency</view>
-                <input class="entry" name="water_freq_avg" placeholder="watering every how many days ."/>
+                <input class="entry" name="water_frequency" placeholder="watering every how many days ."/>
            
     
 

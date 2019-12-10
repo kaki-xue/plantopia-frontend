@@ -13,7 +13,7 @@
     <view class="card">
       <text  class="fas fa-leaf"></text>
       <view class="card-product-infos">
-        <view class="h2">Genus</view>
+        <view class="h2">Name</view>
         <view class="p">{{plant.latin_name}} </view>
       </view>
     </view>
@@ -38,6 +38,8 @@
       <view bindtap="removePlant" class="fas fa-trash-alt"></view>
       <view bindtap="updatePlant" class="fas fa-pen-square"></view>
     </view>
-    
+      <button bindtap="goToPlantLibrary">Careinfo</button>
   </view>
+
+
 </view>

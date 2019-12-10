@@ -28,25 +28,26 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
-    const user_id = getApp().globalData.userId
+    // let page = this;
+    // const user_id = getApp().globalData.userId
+    // console.log(111, user_id)
    
 
-    wx.request({
-      url: getApp().globalData.host + `/api/v1/users/${user_id}`,
-      // `/api/v1/users/${user_id}`,
-      method: 'GET',
-      success(res) {
+    // wx.request({
+    //   url: getApp().globalData.host + `/api/v1/users/${user_id}`,
+    //   // `/api/v1/users/${user_id}`,
+    //   method: 'GET',
+    //   success(res) {
         
-        const plants = res.data.plants;
-        console.log('page data', page.data)
-        page.setData({
-          plants: plants
-        });
-
-        wx.hideToast();
-      }
-    });
+    //     const plants = res.data.plants;
+    //     page.setData({
+    //       plants
+    //     });
+        
+    //     console.log('page data', page.data)
+    //     wx.hideToast();
+    //   }
+    // });
 
   },
 
@@ -63,17 +64,17 @@ Page({
   onShow: function () {
     let page = this;
     const user_id = getApp().globalData.userId
-   
+    console.log(11, user_id)   
 
     wx.request({
-      url: getApp().globalData.host + `/api/v1/users/1`,
+      url: getApp().globalData.host + `/api/v1/users/${user_id}`,
       // `/api/v1/users/${user_id}`,
       method: 'GET',
       success(res) {
         const plants = res.data.plants;
         console.log('page data', page.data)
         page.setData({
-          plants: plants
+          plants
         });
 
         wx.hideToast();

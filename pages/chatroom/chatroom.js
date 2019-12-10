@@ -12,7 +12,7 @@ Page({
   plant_msg_hi:"Hey ya :)",
   plant_msg_watered: 'Thank you! I am happy! :D',
   plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!",
-    plant_msg_often: "Coucou.....Time to water your baby .......!" 
+  plant_msg_often: "Coucou.....Time to water your baby .......!" 
 },
 
   // fetch all messages
@@ -46,8 +46,8 @@ Page({
    
    let plant_chat={}
    let plant_id = options.plant_id
-  //  let user_id = app.globalData.userId
-  let user_id = 1
+   let user_id = app.globalData.userId
+
    plant_chat.user_id=user_id
    plant_chat.plant_id=plant_id
     wx.request({
@@ -210,26 +210,28 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    // const app = getApp()
-    // let user_id = app.globalData.userId
-    // let page = this
-    // let plant_chat = {}
-    // plant_chat.user_id = user_id
-    // //  plant_chat.plant_id=options.dataset.id
-    // plant_chat.plant_id = 3
-    // wx.request({
-    //   url: getApp().globalData.local_host + `/api/v1/plant_chats`,
-    //   method: 'post',
-    //   data: plant_chat,
-    //   success: function (res) {
-    //     console.log("success", res);
-    //     const id = res.data.id
-    //     console.log("chatroom-id:", id)
-    //     // wx.reLaunch({
-    //     //   url: `/pages/chatroom/chatroom`,
-    //     // })
-    //   }
-    // })
+    const app = getApp()
+    let page = this
+
+    let plant_chat = {}
+    let plant_id = options.plant_id
+    let user_id = app.globalData.userId
+    
+    plant_chat.user_id = user_id
+    plant_chat.plant_id = plant_id
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/plant_chats`,
+      method: 'post',
+      data: plant_chat,
+      success: function (res) {
+        console.log("success", res);
+        const plant_chat_id = res.data.id
+        page.setData({
+          plant_chat_id
+        })
+        page.fetchMessages()
+      }
+    })
   },
 
   /**

@@ -5,7 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-
+    plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!",
+    plant_msg_often: "Coucou.....Time to water your baby .......!" 
   },
   goToNew: function () {
     wx.navigateTo({
@@ -28,27 +29,22 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    // let page = this;
-    // const user_id = getApp().globalData.userId
-    // console.log(111, user_id)
-   
+    let page = this;
+    const user_id = getApp().globalData.userId
 
-    // wx.request({
-    //   url: getApp().globalData.host + `/api/v1/users/${user_id}`,
-    //   // `/api/v1/users/${user_id}`,
-    //   method: 'GET',
-    //   success(res) {
-        
-    //     const plants = res.data.plants;
-    //     page.setData({
-    //       plants
-    //     });
-        
-    //     console.log('page data', page.data)
-    //     wx.hideToast();
-    //   }
-    // });
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/users/${user_id}`,
+      method: 'GET',
+      success(res) {
+        const plants = res.data.plants;
+        console.log('page data', page.data)
+        page.setData({
+          plants
+        });
 
+        wx.hideToast();
+      }
+    });
   },
 
   /**
@@ -63,8 +59,7 @@ Page({
    */
   onShow: function () {
     let page = this;
-    const user_id = getApp().globalData.userId
-    console.log(11, user_id)   
+    const user_id = getApp().globalData.userId  
 
     wx.request({
       url: getApp().globalData.host + `/api/v1/users/${user_id}`,

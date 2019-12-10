@@ -25,7 +25,10 @@
       </view> -->
       <view class="icons">
       <!-- <view class="fas fa-heart-broken"></view> -->
-        <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-heart-broken"></view>
+
+        <view wx:if="{{plant.plant_thirsty}}"bindtap="goToChatroom" data-id="{{plant.id}}"class="far fa-frown"></view>
+        <view wx:if="{{!plant.plant_thirsty}}"bindtap="goToChatroom" data-id="{{plant.id}}"class="far fa-smile-beam"></view>
+
         <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-comments"></view>
       </view>
     </view>

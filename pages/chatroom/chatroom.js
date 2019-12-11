@@ -143,6 +143,7 @@ Page({
 
     const plantThirsty = page.data.plant_msg_often
     const userDelay = page.data.plant_msg_delay
+    const plantLeader = page.data.plant_msg_delay
 
     const msgsArray = page.data.allmsg;
     const lastMsg = msgsArray[msgsArray.length - 1];
@@ -151,7 +152,7 @@ Page({
     const lastLastLastMsg = msgsArray[msgsArray.length -3];
 
     // if there is no msg or the last message was not a coo coo
-    if (lastMsg == undefined || lastMsg.text !== plantThirsty) {
+    if (lastMsg == undefined || lastMsg.text !== plantThirsty && lastMsg.text !== plantLeader) {
       wx.showModal({
         title: "Wait until baby is thirsty!",
         content: "You don't need to delay now",
@@ -165,7 +166,7 @@ Page({
         }
       })
     // if the message before the last message, before the last message was a delay message (i.e user:delayed, plant: OK dear leader etc., plant: I'm thirsty)
-    } else if (lastLastLastMsg == undefined && msgsArray.length > 1 && lastMsg.text == plantThirsty) {
+    } else if (lastLastLastMsg == undefined && msgsArray.length > 1 && lastMsg.text == plantThirsty || lastMsg.text === plantLeader ) {
       wx.showModal({
         title: "Don't keep pushing this off!",
         content: "Feed the baby!",

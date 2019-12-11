@@ -26,13 +26,13 @@
       <!-- <view>
         <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
       </view> -->
-      <view class="icons" bindtap="goToChatroom">
+      <view class="icons" data-id="{{plant.id}}" bindtap="goToChatroom">
       <!-- <view class="fas fa-heart-broken"></view> -->
 
         <view wx:if="{{plant.plant_thirsty}}" data-id="{{plant.id}}"class="far fa-frown"></view>
         <view wx:if="{{!plant.plant_thirsty}}" data-id="{{plant.id}}"class="far fa-smile-beam"></view>
 
-        <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-comments"></view>
+        <view data-id="{{plant.id}}"class="fas fa-comments"></view>
       </view>
     </view>
    </view>

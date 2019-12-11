@@ -54,7 +54,7 @@ Page({
     plant.description = event.detail.value.description
     const user_id = getApp().globalData.userId
     plant.latin_name = event.detail.value.latin_name
-    plant.water_frequency = event.detail.value.water_freq_avg
+    plant.water_frequency = event.detail.value.water_frequency
     plant.user_id = user_id
     plant.image = page.data.imageUrl
 

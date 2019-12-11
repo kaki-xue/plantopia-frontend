@@ -30,10 +30,10 @@
       </view>
     </view>
 
-     <view class="card">
+     <!-- <view class="card">
         <view class="btn btn-plant" bindtap="getUserPic">  <text class="fas fa-leaf"></text><text class="texto">Login</text>
       </view>
-    </view>
+    </view> -->
   
   </view>
 </view>

@@ -1,4 +1,7 @@
 /* pages/mycollection/mycollection.wxss */
+.name {
+  padding:3px;
+}
 .card-category {
   margin:20px;
   background-size: cover;
@@ -9,11 +12,13 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  flex-wrap: wrap;
+  text-align: center;
 }
 .fav-card {
   display:flex;

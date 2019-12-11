@@ -77,12 +77,12 @@
   display:flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin:8px;
+  margin:3px;
 }
 .plant {
   background-size: cover;
   background-position: center;
-  height: 118px;
+  height: 112px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,10 +90,11 @@
   font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-  border-radius: 0px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width:124px;
-  margin-bottom:7px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  width:120px;
+  margin-bottom:10px;
+
 }
 .page__bd {
 padding-bottom: 10px;

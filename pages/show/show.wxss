@@ -4,13 +4,17 @@
   color:rgb(150,150,150);
   font-weight: light;
   width:100%;
+  text-align: center;
 }
 .little-header {
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items: center;
   width:50%;
   margin-bottom:10px;
+  text-align: center;
+
+
 }
 .care-bit {
   width:240px;
@@ -47,7 +51,7 @@
   display:flex;
   justify-content:space-between;
   align-items: center;
-  margin:0px;
+  margin:8px auto;
 }
 
 .two-btn {
@@ -71,6 +75,7 @@
   color: #116848;
   opacity:0.8;
   margin-right:10px;
+  text-align: center;
 
   
 }
@@ -104,20 +109,20 @@ image {
 }
 
 .card-trip .h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 18px;
   margin-left: 10px;
   color:rgb(80,80,80);
   width:50%;
   word-wrap: break-word;
+  font-weight: light;
 
 }
 
 .card-trip .p {
   font-size: 16px;
   opacity: .7;
-  margin: 0;
-  font-weight: bold;
+  margin: 4px auto;
+
   color:black;
 }
 

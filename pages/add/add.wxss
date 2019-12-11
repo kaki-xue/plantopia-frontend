@@ -1,3 +1,8 @@
+
+.green-btn {
+color:#116848;
+margin:16px;
+}
 .entry {
   padding: 16px 16px;
   background: white;

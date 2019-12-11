@@ -32,13 +32,17 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.fas {
+.fa-camera {
   color:white;
   font-size:40px;
   padding:0 15px;
 }
 /* pages/scan_result/scan_result.wxss */
 .fa-info-circle {
+  color:#116848;
+}
+
+.fa-plus {
   color:#116848;
 }
 .under-img {

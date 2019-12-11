@@ -17,6 +17,7 @@
     <view class="under-img">
           <view class="plant-name">{{scanname}}</view>
           <view wx:if="{{!nopic}}" class="fas fa-info-circle" bindtap="goToLibrary"></view>
+          <view else bindtap="goToNew"><view class="fas fa-plus"></view></view>
     </view>
   </view>
 </view>

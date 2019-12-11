@@ -14,20 +14,23 @@
 
   <view wx:for="{{plants}}" wx:for-index="index" wx:key wx:for-item="plant" class="cards">
 <!-- insert in image tag data-id={{plant.id}} -->
-    <image bindtap="gotToDetail" data-id="{{plant.id}}" src="{{plant.image}}"></image>
+<view class="plant-image"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{plant.image}})" data-id="{{plant.id}}" bindtap="gotToDetail">
+<view class="plant-name">{{plant.nickname}}</view>
+    <!-- <image bindtap="gotToDetail" data-id="{{plant.id}}" src="{{plant.image}}"></image> -->
+</view>
   
     <view class="card-trip-infos">
-      <view>
+      <!-- <view>
         <view class="plant-name">{{plant.nickname}}</view>
-      </view>
+      </view> -->
       <!-- <view>
         <view bindtap="gotToDetail" class="fas fa-info-circle"></view>
       </view> -->
-      <view class="icons">
+      <view class="icons" bindtap="goToChatroom">
       <!-- <view class="fas fa-heart-broken"></view> -->
 
-        <view wx:if="{{plant.plant_thirsty}}"bindtap="goToChatroom" data-id="{{plant.id}}"class="far fa-frown"></view>
-        <view wx:if="{{!plant.plant_thirsty}}"bindtap="goToChatroom" data-id="{{plant.id}}"class="far fa-smile-beam"></view>
+        <view wx:if="{{plant.plant_thirsty}}" data-id="{{plant.id}}"class="far fa-frown"></view>
+        <view wx:if="{{!plant.plant_thirsty}}" data-id="{{plant.id}}"class="far fa-smile-beam"></view>
 
         <view bindtap="goToChatroom" data-id="{{plant.id}}"class="fas fa-comments"></view>
       </view>

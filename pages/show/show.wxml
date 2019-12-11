@@ -8,7 +8,14 @@
       <view class="under-image">
         <view class="h2">{{latin_name}}</view>
          <view class="two-btn">
-          <view class="little-btn" bindtap="goToFav" data-id="{{id}}"> <text class="fas fa-heart up"></text></view>
+          <view class="little-btn" bindtap="goToFav" data-id="{{id}}">
+           <block wx:if="{{isFav == false}}">
+             <text class="fas fa-heart up"></text>
+           </block>
+           <block wx:elif="{{isFav == true}}" >
+             <text style="color:#fe346e" class="fas fa-heart up"></text>
+           </block> 
+           </view>
           <view class="little-btn" bindtap="goToAdd" data-id="{{id}}"><text class="fas fa-plus up"></text></view>
          </view>
        </view>

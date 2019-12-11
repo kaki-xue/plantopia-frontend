@@ -16,6 +16,10 @@
 
 
 }
+
+.fa-heart:toggle {
+  color:green;
+}
 .care-bit {
   width:240px;
   display:flex;

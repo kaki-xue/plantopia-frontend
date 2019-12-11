@@ -45,6 +45,7 @@ Page({
    let page=this
    
    let plant_chat={}
+   console.log(options)
    let plant_id = options.plant_id
    let user_id = app.globalData.userId
 

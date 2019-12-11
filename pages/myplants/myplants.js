@@ -29,22 +29,22 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
-    const user_id = getApp().globalData.userId
+    // let page = this;
+    // const user_id = getApp().globalData.userId
 
-    wx.request({
-      url: getApp().globalData.host + `/api/v1/users/${user_id}`,
-      method: 'GET',
-      success(res) {
-        const plants = res.data.plants;
-        console.log('page data', page.data)
-        page.setData({
-          plants
-        });
+    // wx.request({
+    //   url: getApp().globalData.host + `/api/v1/users/${user_id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const plants = res.data.plants;
+    //     console.log('page data', page.data)
+    //     page.setData({
+    //       plants
+    //     });
 
-        wx.hideToast();
-      }
-    });
+    //     wx.hideToast();
+    //   }
+    // });
   },
 
   /**

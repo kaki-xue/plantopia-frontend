@@ -160,7 +160,7 @@ Page({
     plant.plant_library_id = page.data.plant.id
     plant.user_id = user_id
     plant.image = page.data.imageUrl
-    plant.reminder = page.data.remindervalue
+    // plant.reminder = page.data.remindervalue
     console.log("reminderornot", page.data.remindervalue)
   
 

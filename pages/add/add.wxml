@@ -22,10 +22,10 @@
        
        
         <view class="form-margin">
-           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(250,250,250); background-size:cover; background-image: url({{tempFilePath}});"></view>
+           <view class="preview" bindtap="takePhoto" style="margin:5px auto; border-style:dotted; border-color: rgb(200,200,200); width:120px; height:120px; background-color: #ffffff; background-size:cover; background-image: url({{tempFilePath}});"><view class="fas fa-camera"></view></view>
        
-                <button bindtap="takePhoto">Choose Image</button>
-      
+                <!-- <button bindtap="takePhoto">Choose Image</button>
+       -->
         </view>
             <button class="green-btn" type="primary" form-type="submit">Submit</button>
     </form>

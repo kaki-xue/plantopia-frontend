@@ -70,7 +70,7 @@ takePhoto: function () {
                method: "get",
                success: function (res) {
                  console.log("res-----getback", res)
-                 if (!res.data.plant_libraries.length){
+                 if (res.data.plant_libraries.length === 0){
                    console.log("")
                    page.setData({
                      nopic:true

@@ -10,13 +10,19 @@
 
       <view class="desc">Description</view>
       <input name="description" class="entry" placeholder="About your plant" />
-          <view class="desc">Water Frequency: Every {{plant.water_freq_avg}} days</view>
+          <view class="desc">
+          <view>Water Frequency</view>
+          <view class="entry" > Every {{plant.water_freq_avg}} days
+          </view>
+
+          
+          </view>
 
     
        
        
         <view class="form-margin">
-           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>
+           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(250,250,250); background-size:cover; background-image: url({{tempFilePath}});"></view>
        
                 <button bindtap="takePhoto">Choose Image</button>
       

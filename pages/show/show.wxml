@@ -30,8 +30,8 @@
         <view class="fas fa-home down"></view>
         <!-- <view class="p">family</view> -->
      </view>
-    <view wx:if="{{family!=null}}"class="s-text">{{family}}</view>
-    <view else class="s-text">- -</view>
+    <view wx:if="{{family!==null}}"class="s-text">{{family}}</view>
+
   </view>
 
    <view class="care-bit">
@@ -39,8 +39,8 @@
         <view class="fas fa-ruler-vertical down"></view>
         <!-- <view class="p">height</view> -->
      </view>
-    <view wx:if="{{average_height!=null}}"class="s-text">{{average_height}}</view>
-    <view else class="s-text">- -</view>
+    <view wx:if="{{average_height!==null}}"class="s-text">{{average_height}}</view>
+
   </view>
 
    <view class="care-bit">
@@ -48,8 +48,8 @@
         <view class="fas fa-sun down"></view>
         <!-- <view class="p">light</view> -->
       </view>
-      <view wx:if="{{light_preference!=null}}"class="s-text">{{light_preference}}</view>
-       <view else class="s-text">- -</view>
+      <view wx:if="{{light_preference!==null}}"class="s-text">{{light_preference}}</view>
+
   </view>
 
    <view class="care-bit">
@@ -57,8 +57,7 @@
         <view class="fas fa-box-open down"></view>
         <!-- <view class="p">soil</view> -->
      </view>
-     <view wx:if="{{soil!=null}}" class="s-text">{{soil}}</view>
-          <view else class="s-text">- -</view>
+     <view wx:if="{{soil!==null}}" class="s-text">{{soil}}</view>
   </view>
 
    <view class="care-bit">
@@ -66,8 +65,8 @@
         <view class="fas fa-stethoscope down"></view>
         <!-- <view class="p">temperature</view> -->
      </view>
-     <view wx:if="{{temperature!=null}}" class="s-text">{{temperature}}</view>
-          <view else class="s-text">- -</view>
+     <view wx:if="{{temperature!==null}}" class="s-text">{{temperature}}</view>
+
   </view>
 
    <view class="care-bit">
@@ -75,8 +74,8 @@
         <view class="fas fa-smile-wink down"></view>
         <!-- <view class="p">flowering</view> -->
       </view>
-      <view wx:if="{{flowering!=null}}" class="s-text">{{flowering}}</view>
-           <view else class="s-text">- -</view>
+      <view wx:if="{{flowering!==null}}" class="s-text">{{flowering}}</view>
+
   </view>
 
      <view class="care-bit">
@@ -84,8 +83,8 @@
         <view class="fas fa-smile-wink down"></view>
         <!-- <view class="p">watering</view> -->
       </view>
-      <view wx:if="{{watering!=null}}" class="s-text">{{watering}}</view>
-           <view else class="s-text">- -</view>
+      <view wx:if="{{watering!==null}}" class="s-text">{{watering}}</view>
+
   </view>
 
   <view class="care-bit">
@@ -93,8 +92,8 @@
         <view class="fas fa-smile-wink down"></view>
         <!-- <view class="p">fertilizer</view> -->
       </view>
-      <view wx:if="{{fertilizer!=null}}" class="s-text">{{fertilizer}}</view>
-           <view else class="s-text">- -</view>
+      <view wx:if="{{fertilizer!==null}}" class="s-text">{{fertilizer}}</view>
+
   </view>
 
    <view class="care-bit">
@@ -102,8 +101,8 @@
         <view class="fas fa-smile-wink down"></view>
         <!-- <view class="p">Care</view> -->
       </view>
-      <view wx:if="{{careinfo!=null}}" class="s-text">{{careinfo}}</view>
-           <view else class="s-text">- -</view>
+      <view wx:if="{{careinfo!==null}}" class="s-text">{{careinfo}}</view>
+
   </view>
 
 

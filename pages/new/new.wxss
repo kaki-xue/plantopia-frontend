@@ -1,4 +1,13 @@
 /* pages/new/new.wxss */
+.preview {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-camera {
+  font-size:40px;
+  color:rgb(100,100,100)
+}
 .pic-btn {
   margin:16px auto;
 }

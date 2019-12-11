@@ -1,4 +1,7 @@
 /* pages/new/new.wxss */
+.pic-btn {
+  margin:16px auto;
+}
 
 .form-container {
   display:flex;

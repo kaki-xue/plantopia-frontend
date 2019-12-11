@@ -25,6 +25,7 @@ margin:16px;
 
 .desc {
   text-shadow: 1px;
+  margin:16px auto;
 }
 
 

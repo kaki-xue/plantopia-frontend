@@ -20,12 +20,12 @@
         <view class="desc">Description</view>
                 <input class="entry" name="description" placeholder="About your plant"/>
           
+
         <view class="tom">
-          <view class="">Image</view>
-           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(53, 53, 53); background-size:cover; background-image: url({{tempFilePath}});"></view>
+           <view style="margin:5px auto; width:120px; height:120px; background-color: rgb(250,250,250); background-size:cover; background-image: url({{tempFilePath}});"></view>
            <view class="">
              <view class=""> 
-              <view class="">
+              <view class="pic-btn">
                 <button bindtap="takePhoto">Choose Image</button>
               </view>
              </view>

@@ -138,6 +138,12 @@
 					"pathName": "pages/fakelogin/fakelogin",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/new/new",
+					"pathName": "pages/new/new",
+					"scene": null
 				}
 			]
 		}

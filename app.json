@@ -1,9 +1,8 @@
 {
   "pages": [
   
-    "pages/user/user",
-    "pages/new/new",
     "pages/index/index",
+    "pages/new/new",
     "pages/show/show",
     "pages/add/add",
     "pages/myplants/myplants",
@@ -12,9 +11,8 @@
     "pages/scan_result/scan_result",
     "pages/logs/logs",
     "pages/update/update",
-    "pages/mycollection/mycollection",
-    "utils/av-weapp-min.js"
-
+    "pages/user/user",   
+    "pages/mycollection/mycollection"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,9 +21,9 @@
     "navigationBarTextStyle": "black"
   },
     "tabBar": {
-      "color": "gb(9, 7, 35)e",
-      "selectedColor": "rgb(9, 7, 35)",
-      "backgroundColor": "white;",
+      "color": "#000000",
+      "selectedColor": "#0c9463",
+      "backgroundColor": "#ffffff",
       "list": [
         {
           "pagePath": "pages/index/index",

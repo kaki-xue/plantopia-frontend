@@ -24,44 +24,44 @@
       </view>
     </view>
 
-    <view class="card">
+    <view wx:if="{{plant.plant_library.description!==null}}" class="card">
       <view class="card-product-infos">
         <view class="h2">Description</view>
         <view class="p"> {{plant.plant_library.description}}</view>
       </view>
     </view>
 
-     <view class="card">
+     <view wx:if="{{plant.plant_library.careinfo!==null}}" class="card">
       <view class="card-product-infos">
         <view class="h2">Care</view>
         <view class="p"> {{plant.plant_library.careinfo}}</view>
       </view>
     </view>
 
-     <view class="card">
+     <view wx:if="{{plant.plant_library.family!==null}}" class="card">
       <view class="card-product-infos">
         <view class="h2">Family</view>
         <view class="p"> {{plant.plant_library.family}}</view>
       </view>
     </view>
 
-     <view class="card">
+     <view wx:if="{{plant.plant_library.light_preference!==null}}"class="card">
       <view class="card-product-infos">
         <view class="h2">Light</view>
         <view class="p"> {{plant.plant_library.light_preference}}</view>
       </view>
     </view>
 
-       <view class="card">
+       <view wx:if="{{plant.plant_library.watering!==null}}"class="card">
       <view class="card-product-infos">
         <view class="h2">Watering</view>
         <view class="p"> {{plant.plant_library.watering}}</view>
       </view>
     </view>
 
-     <view class="card">
+     <view wx:if="{{plant.plant_library.soil!==null}}"class="card">
       <view class="card-product-infos">
-        <view class="h2">Description</view>
+        <view class="h2">Soil</view>
         <view class="p"> {{plant.plant_library.soil}}</view>
       </view>
     </view>

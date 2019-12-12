@@ -35,7 +35,7 @@ https://images.pexels.com/photos/3263719/pexels-photo-3263719.jpeg?auto=compress
 <view class="plant-cards">
   <view wx:for="{{plant_libraries}}" wx:for-index="index" wx:key wx:for-item="plant" >
   <view class="plant" style="background-image: url({{plant.image}})" bindtap="goToShow" data-id="{{plant.id}}">
-  <view class="plant-text">{{plant.name}}</view>
+  <view class="plant-text" style="text-shadow: 2px 2px 8px #3f3d3d;">{{plant.name}}</view>
   </view>
   </view>
 </view>

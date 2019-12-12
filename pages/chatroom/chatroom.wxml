@@ -1,7 +1,7 @@
 <!--pages/chatroom/chatroom.wxml-->
 
   <view class="plant-avatar">
-  <image class="avatar-large" src="https://images.unsplash.com/photo-1554631221-f9603e6808be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" ></image>
+  <image class="avatar-large" src="{{plant.image}}" ></image>
   </view>
 
   <view class="chatroom">

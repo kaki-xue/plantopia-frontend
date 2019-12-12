@@ -45,12 +45,24 @@ Page({
    let page=this
    
    let plant_chat={}
-   console.log(options)
+   console.log("options",options)
    let plant_id = options.plant_id
    let user_id = app.globalData.userId
 
    plant_chat.user_id=user_id
    plant_chat.plant_id=plant_id
+    wx.request({
+      url: getApp().globalData.host + `/api/v1/users/${user_id}/plants/${plant_id}`,
+      method: 'GET',
+      success(res) {
+
+        const plant = res.data;
+        console.log("planttt", plant)
+        page.setData({
+          plant
+        })
+      }
+    });
     wx.request({
       url: getApp().globalData.host + `/api/v1/plant_chats`,
       method: 'post',

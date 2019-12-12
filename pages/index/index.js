@@ -48,7 +48,7 @@ Page({
         page.setData({
           plant_libraries: plant_libraries
         });
-
+        console.log('plant library page data', page.data.plant_libraries)
         wx.hideToast();
       }
     });

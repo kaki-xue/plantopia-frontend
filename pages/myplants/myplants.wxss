@@ -4,7 +4,7 @@ color:red;
 }
 
 .fa-smile-beam {
- color:#0edf92;
+ color:#116848;
 }
 .plant-image {
   height:148px;
@@ -109,7 +109,7 @@ color:red;
 }
 
 .fa-comments {
-  color:#0edf92;
+  color:#116848;
   font-size:32px;
   margin:5px;
 }

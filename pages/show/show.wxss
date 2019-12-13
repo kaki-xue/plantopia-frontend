@@ -112,7 +112,7 @@ image {
   border-radius:8px;
 }
 
-.card-trip .h2 {
+/* .card-trip .h2 {
   font-size: 18px;
   margin-left: 10px;
   color:rgb(80,80,80);
@@ -120,6 +120,16 @@ image {
   word-wrap: break-word;
   font-weight: light;
 
+} */
+ .h2 {
+font-size: 18px;
+margin-left: 19px;
+color: rgb(80,80,80);
+width: 50%;
+word-wrap: break-word;
+font-weight: bold;
+padding-top:8px;
+text-align: center;
 }
 
 .card-trip .p {

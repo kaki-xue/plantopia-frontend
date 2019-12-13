@@ -22,9 +22,9 @@
        
        
         <view class="form-margin">
-           <view class="preview" bindtap="takePhoto" style="margin:5px auto; border-style:dotted; border-color: rgb(200,200,200); width:120px; height:120px; background-color: #ffffff; background-size:cover; background-image: url({{tempFilePath}});">
+           <view class="preview" bindtap="takePhoto" style="margin:5px auto; border-style:dotted; border-color: rgb(200,200,200); width:120px; height:120px; background-color: #ffffff; background-size:cover; background-image: url({{imageUrl}});">
            <view>
-             <view class="fas fa-camera"></view>
+             <view class="fas fa-camera" wx:if="{{!tempFilePath}}"></view>
            </view>
            
            </view>

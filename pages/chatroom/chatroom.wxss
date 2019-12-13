@@ -25,12 +25,12 @@ border-top: none;
   }
 
 .btn-user {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  /* color: #4A4A4A; */
+  border: 3px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
   /* font-weight: light; */
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
   margin:15px;
   width:60%;
@@ -38,14 +38,14 @@ border-top: none;
   float:right;
 }
 .btn-plant {
-  color: white;
   padding: 8px 24px;
-  background: #1EDD88;
+  border: 3px solid #1EDD88;
   transition: background 0.3s ease;
   margin:15px;
   border-radius: 50px;
   width:60%;
   display:inline-block;
+  opacity: 0.8;
 }
 
 .msg-button {

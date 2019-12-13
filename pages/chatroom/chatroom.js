@@ -11,7 +11,7 @@ Page({
   user_msg_delay: "Hold on there, I'll water you later",
   plant_msg_hi:"Hey ya :)",
   plant_msg_watered: 'Thank you! I am happy! :D',
-  plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!",
+  plant_msg_delay: "ok..busy bee. Just make sure to water me later - I'm thirsty!",
   plant_msg_often: "Coucou.....Time to water your baby .......!" 
 },
 

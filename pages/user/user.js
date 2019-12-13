@@ -26,9 +26,21 @@ Page({
    * Lifecycle function--Called when page load
    */
 
-  getUserPic: function () {
-    
-  },
+  // getUserPic: function () {
+  //   let page = this
+  //   let app = getApp()
+  //   wx.getUserInfo({
+  //     success: res => {
+  //       app.globalData.userInfo = res.userInfo
+  //       this.setData({
+  //         userInfo: res.userInfo,
+  //         hasUserInfo: true
+  //       })
+  //       console.log("userInfo", page.data.userInfo)
+  //     }
+  //   })
+ 
+  // },
   onLoad: function (options) {
 
   },
@@ -44,18 +56,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    let page = this
-    let app = getApp()
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-        console.log("userInfo", page.data.userInfo)
-      }
-    })
+  
     
   },
 

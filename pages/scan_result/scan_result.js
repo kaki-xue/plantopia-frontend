@@ -44,16 +44,16 @@ takePhoto: function () {
       }).save().then(
         file => {
           const imageUrl = file.url()
-          wx.showModal({
-            title: 'line 34 scan result js',
-            content: `${imageUrl}`,
-          })
-          console.log('imageUrl link', imageUrl)
+          let a = imageUrl.split(":")
+          let img = a[0] + "s:" + a[1]
+      
+          console.log('imageUrl link', img)
           page.setData({
-            imageUrl: imageUrl
+            img: img
           });
+     
           wx.request({
-            url: page.data.imageUrl,
+            url: img,
             method: 'GET',
             responseType: 'arraybuffer',
             success: function (res) {

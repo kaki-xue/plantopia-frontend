@@ -4,8 +4,10 @@
  <!-- profile pic -->
   <view class="profile-pic">
     <!-- <text class="fas fa-heart"></text> -->
-    <image class="avatar-large" src="{{userInfo.avatarUrl}}" mode="aspectFill">
-    </image>
+    <view class="avatar-large"  ><open-data type="userAvatarUrl"></open-data></view>
+    
+    <!-- <image class="avatar-large" src="{{userInfo.avatarUrl}}" mode="aspectFill"> -->
+    <!-- </image> -->
   </view>
 
 
@@ -30,12 +32,14 @@
       </view>
     </view>
 
-     <!-- <view class="card">
-        <view class="btn btn-plant" bindtap="getUserPic">  <text class="fas fa-leaf"></text><text class="texto">Login</text>
+     <view class="card">
+        <view class="btn btn-plan  dfewawAWWqwt" bindtap="getUserPic">  <text class="fas fa-leaf"></text><text class="texto">Login</text>
+        
+
       </view>
-    </view> -->
+    </view>
   
-  </view>
+  </view>e  
 </view>
 
   </view>

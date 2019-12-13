@@ -11,7 +11,7 @@ Page({
   user_msg_delay: "Hold on there, I'll water you later",
   plant_msg_hi:"Hey ya :)",
   plant_msg_watered: 'Thank you! I am happy! :D',
-  plant_msg_delay: "ok..busy bee. Just make sure to water me later - I'm thirsty!",
+    plant_msg_delay: "ok..dear leader.. somebody's a busy bee. Just make sure to water me later - I'm thirsty!",
   plant_msg_often: "Coucou.....Time to water your baby .......!" 
 },
 
@@ -162,6 +162,7 @@ Page({
     const lastMsg = msgsArray[msgsArray.length - 1];
     console.log('last message', lastMsg)
     console.log('last msg', plantThirsty)
+    const lastLastMsg = msgsArray[msgsArray.length -2];
     const lastLastLastMsg = msgsArray[msgsArray.length -3];
 
     // if there is no msg or the last message was not a coo coo
@@ -179,7 +180,7 @@ Page({
         }
       })
     // if the message before the last message, before the last message was a delay message (i.e user:delayed, plant: OK dear leader etc., plant: I'm thirsty)
-    } else if (lastLastLastMsg == undefined && msgsArray.length > 1 && lastMsg.text == plantThirsty || lastMsg.text === plantLeader ) {
+    } else if (lastLastLastMsg == undefined && msgsArray.length > 1 && lastMsg.text == plantThirsty || lastMsg.text == plantLeader || lastMsg.text == plantThirsty && lastLastMsg !== undefined && lastLastLastMsg !== undefined ) {
       wx.showModal({
         title: "Don't keep pushing this off!",
         content: "Feed the baby!",
@@ -224,6 +225,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    // this.fetchMessages()
     // const app = getApp()
     // let page = this
 

@@ -24,11 +24,13 @@ Page({
   // scan-step-1-take a photo
 
 takePhoto: function () {
+  
   let page = this
   wx.chooseImage({
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
     success: function (res) {
+      
       // console.log("scanpage-res:", res)
 
       let tempFilePath = res.tempFilePaths[0];
@@ -42,6 +44,10 @@ takePhoto: function () {
       }).save().then(
         file => {
           const imageUrl = file.url()
+          wx.showModal({
+            title: 'line 34 scan result js',
+            content: `${imageUrl}`,
+          })
           console.log('imageUrl link', imageUrl)
           page.setData({
             imageUrl: imageUrl
@@ -55,7 +61,7 @@ takePhoto: function () {
               // let base64 = 'data:image/jpg;base64,' + wx.arrayBufferToBase64(res.data);
               let base64 = wx.arrayBufferToBase64(res.data);
               console.log("base64", base64);
-
+              
               //  getapi info
               wx.request({
                 url: 'https://plant.market.alicloudapi.com/plant/recognize2',
@@ -101,7 +107,13 @@ takePhoto: function () {
             }
           });
         }
-      ).catch(console.error);
+      ).catch((res) => {
+        wx.showModal({
+          title: 'line 112 scan result js',
+          content: `${res}`,
+        })
+      }
+      );
           },
         })
 },

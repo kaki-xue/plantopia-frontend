@@ -1,7 +1,7 @@
 /* pages/show/show.wxss */
 .s-text {
   font-size:15px;
-  color:rgb(150,150,150);
+  color:#1f6650;
   font-weight: light;
   width:100%;
   text-align: center;
@@ -15,6 +15,10 @@
   text-align: center;
 
 
+}
+
+.fa-heart:toggle {
+  color:green;
 }
 .care-bit {
   width:240px;

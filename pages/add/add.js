@@ -29,6 +29,7 @@ Page({
 
   takePhoto: function () {
     let page = this
+    console.log(page)
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -163,7 +164,7 @@ Page({
     // plant.reminder = page.data.remindervalue
     console.log("reminderornot", page.data.remindervalue)
   
-
+    console.log(plant)
   
   
     wx.request({

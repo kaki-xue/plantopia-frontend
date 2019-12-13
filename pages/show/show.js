@@ -3,12 +3,12 @@
 
 let app = getApp()
 Page({
-
+  
   /**
    * Page initial data
    */
   data: {
-
+isFav: false,
   },
 
   /**
@@ -42,6 +42,10 @@ Page({
   },
   goToFav: function(event) {
     let page = this;
+    let rosecolor = page.data.isFav;
+    this.setData({
+      isFav: true 
+    })
     let user_id = app.globalData.userId
     let plant_library_id = event.currentTarget.dataset.id
     wx.request({

@@ -7,6 +7,7 @@ const config = require('./utils/key.js')
 AV.init({
   appId: config.appId,
   appKey: config.appKey,
+  serverURLs: "https://xvyrqs5q.lc-cn-n1-shared.com"
 });
 
 App({
